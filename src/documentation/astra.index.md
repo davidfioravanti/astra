@@ -11,7 +11,7 @@ Here you will find links to all of the available documentation for the ASTRA sta
 
 - General Documentation 
 
-    - [Application Architecture](../documentation/astra.architecture.md)
-    - [Configuration and Routing](../documentation/astra.configuration.md)
-    - [Styleguide](../documentation/astra.styleguide.md)
-    - [Writing and Running Tests](../documentation/astra.testing.md)
+    - [ASTRA - Architecture](../documentation/astra.architecture.md)
+    - [ASTRA - Configuration](../documentation/astra.configuration.md)
+    - [ASTRA - Styleguide](../documentation/astra.styleguide.md)
+    - [ASTRA - Testing](../documentation/astra.testing.md)

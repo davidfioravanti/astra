@@ -2,15 +2,8 @@
 // * IMPORTS - CONFIGURATON
 // * =========================================================================
 
-import { Context } from "./modules/global/typescript/global.reducer";
-import { Routing } from "./modules/global/typescript/global.reducer";
-import { Settings } from "./modules/global/typescript/global.reducer";
-
-// * =========================================================================
-// * IMPORTS - PAGES
-// * =========================================================================
-
-import { KitchenSink } from "./modules/global/typescript/global.reducer";
+import * as Common from "./modules/common/typescript/common.reducer";
+import * as Global from "./modules/global/typescript/global.reducer";
 
 // * =========================================================================
 // * EXPORTS
@@ -20,8 +13,14 @@ export type Modules = {
 
     global: {
 
-        settings: Readonly<Settings>,
-        context: Readonly<Context>
+        settings: Readonly<Global.Settings>,
+        context: Readonly<Global.Context>
+
+    },
+
+    common: {
+
+        context: Readonly<Common.Context>
 
     }
 
@@ -39,7 +38,7 @@ export namespace Configuraton {
 
             settings: {
 
-                name: "Application",
+                name: "ASTRA (A Starter TypeScript & React Application)",
     
                 version: {
             
@@ -81,7 +80,31 @@ export namespace Configuraton {
 
             },
 
-        }
+        },
+
+        common: {
+
+            context: {
+
+                components: {
+                    
+                },
+
+                layouts: {
+                    
+                },
+
+                pages: {
+
+                    home: {
+                        
+                    },
+
+                },
+
+            },
+
+        },
 
     };
 
@@ -91,11 +114,11 @@ export namespace Configuraton {
 
     const { settings } = Configuraton.modules.global;
 
-    export const routing : Array<Routing.Route> = [
+    export const routing : Global.Routing = [
         {
             name: "Kitchen Sink",
             path: settings.in_development ? "/" : "/kitchen-sink",
-            element: <KitchenSink.Page />
+            element: <Global.KitchenSink.Page />
         }
     ];
 

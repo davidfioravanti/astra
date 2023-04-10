@@ -47,8 +47,6 @@ export namespace Foldable {
 
     export type Context = {
 
-
-
     }
 
     // * =========================================================================
@@ -184,6 +182,7 @@ export namespace Foldable {
                         </div>
 
                     </div>
+                    
                 </>
 
             )

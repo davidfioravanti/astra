@@ -28,19 +28,13 @@ export namespace KitchenSink {
 
     export type Props = {
 
-
-
     }
 
     export type State = {
         
-
-
     }
 
     export type Context = {
-
-
 
     }
 
@@ -55,8 +49,6 @@ export namespace KitchenSink {
             super(props);
 
             this.state = {
-
-                
 
             }
 

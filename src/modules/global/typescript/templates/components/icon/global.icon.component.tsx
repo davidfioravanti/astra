@@ -694,13 +694,9 @@ export namespace Icon {
 
     export type State = {
 
-        
-
     }
 
     export type Context = {
-
-
 
     }
 
@@ -715,8 +711,6 @@ export namespace Icon {
             super(props);
 
             this.state = {
-
-
 
             }
 

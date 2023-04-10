@@ -26,7 +26,6 @@ export type Context = {
 
     layouts: {
 
-
     },
 
     pages: {

@@ -48,3 +48,5 @@ export namespace Routing {
     }
 
 }
+
+export type Routing = Array<Routing.Route>;

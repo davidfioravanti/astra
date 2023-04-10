@@ -8,6 +8,7 @@ import { Configuraton } from "./configuration";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./modules/global/assets/scss/global.index.scss";
+import "./modules/common/assets/scss/common.index.scss";
 
 // * =========================================================================
 // * INITIALIZATION

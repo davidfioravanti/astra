@@ -5,7 +5,7 @@
 
 ## Introduction
 
-ASTRA is a "starter" upon which you can build any scalable web application using TypeScript and React. The framework consists of a module-centric architecture that provides common features and functionalities that are expanded upon via custom modules.
+ASTRA is a framework/starter upon which you can build any scalable web application using TypeScript and React. The framework consists of a module-centric architecture that provides common features and functionalities that are expanded upon via custom modules.
 
 ## Core Principles
 

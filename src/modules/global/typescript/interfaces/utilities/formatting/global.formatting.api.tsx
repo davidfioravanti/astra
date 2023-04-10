@@ -5,8 +5,6 @@
 export namespace Formatting {
 
     export namespace ANSI {
-
-
         
     }
 
