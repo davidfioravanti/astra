@@ -50,8 +50,6 @@ export namespace NavigationList {
 
             let navigationItems: Array<JSX.Element> = [];
 
-            console.log(Formatting.String.toArray("This_is_A_est"))
-
             Configuraton.routing.map((route) => {
 
                 const renderCondition = route.options?.navigation_hidden;
@@ -61,6 +59,7 @@ export namespace NavigationList {
                     const formattedName = Formatting.String.toKebabCase(route.name);
 
                     navigationItems.push(
+
                         <li 
                             key={ `navigation__list-item--${formattedName}` }
                             className={
@@ -73,7 +72,8 @@ export namespace NavigationList {
                             <NavigationItem.Component route={ route }/>
                         
                         </li>
-                    )
+
+                    );
 
                 }
 
