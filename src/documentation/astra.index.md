@@ -5,13 +5,13 @@
 
 ## Introduction
 
-Here you will find links to all of the available documentation for the ASTRA starter/framework.
+Here you will find links to all of the available documentation for the ASTRA framework/starter.
 
 ## Documentation Index
 
 - General Documentation 
 
-    - [ASTRA - Architecture](../documentation/astra.architecture.md)
-    - [ASTRA - Configuration](../documentation/astra.configuration.md)
-    - [ASTRA - Styleguide](../documentation/astra.styleguide.md)
-    - [ASTRA - Testing](../documentation/astra.testing.md)
+    - [ASTRA - Framework Architecture](../documentation/astra.framework-architecture.md)
+    - [ASTRA - Framework Configuration and Routing](../documentation/astra.framework-configuration.md)
+    - [ASTRA - Framework Styleguide](../documentation/astra.framework-styleguide.md)
+    - [ASTRA - Framework Testing Writing and Running Tests](../documentation/astra.framework-testing.md)

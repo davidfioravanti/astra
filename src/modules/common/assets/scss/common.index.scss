@@ -1,0 +1,14 @@
+// * ==========================================================
+// * COMMON - DEFAULT IMPORTS
+// * ==========================================================
+
+@import "./common.resets";
+@import "./common.variables";
+@import "./common.mixins";
+@import "./common.utilities";
+
+// * ==========================================================
+// * COMMON - PAGE IMPORTS
+// * ==========================================================
+
+@import "./templates/pages/common.home.page";

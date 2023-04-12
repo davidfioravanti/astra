@@ -1,5 +1,5 @@
 .kitchen-sink__page {
-    max-width: $--breakpoint--xx-large;
+    max-width: $----breakpoint--xx-large;
     margin: auto;
 }
 
@@ -8,8 +8,8 @@
 }
 
 .kitchen-sink__page-heading {
-    font-family: $--font-family--primary;
-    font-size: $--font-size--h1;
+    font-family: $----font-family--primary;
+    font-size: $----font-size--h1;
     margin-block-end: 0;
     font-weight: bold;
     text-align: center;
@@ -25,16 +25,16 @@
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
     max-height: 324px;
-    max-width: $--breakpoint--xx-large;
+    max-width: $----breakpoint--xx-large;
     overflow-y: auto;
     row-gap: 8px;
     width: auto;
 
-    @include --breakpoint__large--below {
+    @include ----breakpoint__large--below {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include --breakpoint__medium--below {
+    @include ----breakpoint__medium--below {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -47,14 +47,14 @@
 }
 
 .kitchen-sink__color-label {
-    font-family: $--font-family--secondary;
+    font-family: $----font-family--secondary;
     font-size: 16px;
     font-weight: bold;
     margin: auto 0;
 }
 
 .kitchen-sink__color-value {
-    font-family: $--font-family--secondary;
+    font-family: $----font-family--secondary;
     font-size: 16px;
     font-weight: bold;
     padding: 8px;
@@ -64,18 +64,18 @@
     column-gap: 8px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: $--breakpoint--xx-large;
+    max-width: $----breakpoint--xx-large;
     max-height: 324px;
     margin: auto;
     overflow-y: auto;
     row-gap: 8px;
     width: auto;
 
-    @include --breakpoint__large--below {
+    @include ----breakpoint__large--below {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include --breakpoint__medium--below {
+    @include ----breakpoint__medium--below {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -88,12 +88,12 @@
 }
 
 .kitchen-sink__icon-label {
-    font-family: $--font-family--secondary;
+    font-family: $----font-family--secondary;
     font-size: 16px;
     font-weight: bold;
     margin: auto 0;
 
-    @include --breakpoint__small--below {
+    @include ----breakpoint__small--below {
         font-size: 14px;
         line-height: 24px;
     }
@@ -112,7 +112,7 @@
     grid-template-columns: repeat(1, 1fr);
     margin: auto;
     max-height: 324px;
-    max-width: $--breakpoint--xx-large;
+    max-width: $----breakpoint--xx-large;
     overflow-y: auto;
     row-gap: 8px;
     width: auto;
@@ -121,7 +121,7 @@
 .kitchen-sink__route-container {
     border: 1px solid black;
     display: grid;
-    font-family: $--font-family--secondary;
+    font-family: $----font-family--secondary;
     font-weight: bold;
     grid-auto-columns: auto;
     padding: 8px;
@@ -131,14 +131,14 @@
     display: grid;
     grid-template-columns: auto 1fr;
 
-    @include --breakpoint__medium--below {
+    @include ----breakpoint__medium--below {
         grid-template-columns: 1fr;
     }
 }
 
 .kitchen-sink__typography-container {
     display: grid;
-    font-family: $--font-family--secondary;
+    font-family: $----font-family--secondary;
     grid-template-columns: 1fr;
     margin-bottom: 8px;
     padding: 8px;
@@ -160,13 +160,13 @@
 .kitchen-sink__typography-h1 {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--h1;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--h1;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--h1;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--h1;
     }
 
 }
@@ -174,13 +174,13 @@
 .kitchen-sink__typography-h2 {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--h2;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--h2;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--h2;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--h2;
     }
 
 }
@@ -188,13 +188,13 @@
 .kitchen-sink__typography-h3 {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--h3;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--h3;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--h3;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--h3;
     }
 
 }
@@ -202,13 +202,13 @@
 .kitchen-sink__typography-h4 {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--h4;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--h4;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--h4;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--h4;
     }
 
 }
@@ -216,13 +216,13 @@
 .kitchen-sink__typography-h5 {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--h5;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--h5;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--h5;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--h5;
     }
 
 }
@@ -230,13 +230,13 @@
 .kitchen-sink__typography-h6 {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--h6;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--h6;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--h6;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--h6;
     }
 
 }
@@ -244,13 +244,13 @@
 .kitchen-sink__typography-p {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--root;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--root;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--root;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--root;
     }
 
 }
@@ -258,22 +258,22 @@
 .kitchen-sink__typography-root {
 
     &--primary {
-        font-family: $--font-family--primary;
-        font-size: $--font-size--root;
+        font-family: $----font-family--primary;
+        font-size: $----font-size--root;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
-        font-size: $--font-size--root;
+        font-family: $----font-family--secondary;
+        font-size: $----font-size--root;
     }
 
 }
 
 .kitchen-sink__typography-font-family {
     border-left: 2px dashed black;
-    color: $--color--primary;
-    font-family: $--font-family--primary;
-    font-size: $--font-size--h6;
+    color: $----color--primary;
+    font-family: $----font-family--primary;
+    font-size: $----font-size--h6;
     font-weight: bold;
     margin-bottom: 16px;
     margin-right: 24px;
@@ -284,7 +284,7 @@
     user-select: none;
     writing-mode: vertical-rl;
 
-    @include --breakpoint__medium--below {
+    @include ----breakpoint__medium--below {
         margin: 0;
         border-left: none;
         border-bottom: 2px dashed black;
@@ -297,11 +297,11 @@
     }
 
     &--primary {
-        font-family: $--font-family--primary;
+        font-family: $----font-family--primary;
     }
 
     &--secondary {
-        font-family: $--font-family--secondary;
+        font-family: $----font-family--secondary;
     }
 
 }

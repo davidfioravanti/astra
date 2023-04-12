@@ -38,7 +38,7 @@ export namespace Configuraton {
 
             settings: {
 
-                name: "ASTRA (A Starter TypeScript & React Application)",
+                name: "",
     
                 version: {
             
@@ -97,6 +97,16 @@ export namespace Configuraton {
                 pages: {
 
                     home: {
+
+                        language: {
+
+                            headings: {
+
+                                page_title: "Home"
+
+                            }
+
+                        }
                         
                     },
 
@@ -116,9 +126,17 @@ export namespace Configuraton {
 
     export const routing : Global.Routing = [
         {
+            name: "Home",
+            path: settings.in_development ? "/home" : "/",
+            element: <Common.Home.Page />
+        },
+        {
             name: "Kitchen Sink",
             path: settings.in_development ? "/" : "/kitchen-sink",
-            element: <Global.KitchenSink.Page />
+            element: <Global.KitchenSink.Page />,
+            options: {
+                navigation_hidden: false
+            }
         }
     ];
 

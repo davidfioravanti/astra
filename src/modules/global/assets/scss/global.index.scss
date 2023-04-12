@@ -1,5 +1,5 @@
 // * ==========================================================
-// * DEFAULT IMPORTS
+// * GLOBAL - DEFAULT IMPORTS
 // * ==========================================================
 
 @import "./global.resets";
@@ -8,14 +8,14 @@
 @import "./global.utilities";
 
 // * ==========================================================
-// * COMPONENT IMPORTS
+// * GLOBAL - COMPONENT IMPORTS
 // * ==========================================================
 
 @import "./templates/components/global.foldable.component";
 @import "./templates/components/global.icon.component";
 
 // * ==========================================================
-// * PAGE IMPORTS
+// * GLOBAL - PAGE IMPORTS
 // * ==========================================================
 
 @import "./templates/pages/global.kitchen-sink.page";

@@ -3,20 +3,24 @@
 // * =========================================================================
 
 import React from "react";
-import { Configuraton } from "../../../../../../configuration";
-import { NavigationList } from "../../../../../global/typescript/global.reducer";
+
+import { Icon } from "../../../global.reducer";
+import { Link } from "react-router-dom";
+import { Routing } from "../../../global.reducer";
 
 // * =========================================================================
 // * EXPORTS
 // * =========================================================================
 
-export namespace Home {
+export namespace NavigationItem {
 
     // * =========================================================================
     // * DATA STRUCTURES
     // * =========================================================================
 
     export type Props = {
+
+        route: Routing.Route
 
     }
 
@@ -26,25 +30,13 @@ export namespace Home {
 
     export type Context = {
 
-        language: {
-
-            headings: {
-
-                page_title: string
-
-            }
-
-        }
-
     }
 
     // * =========================================================================
     // * REACT COMPONENTS
     // * =========================================================================
 
-    export class Page extends React.Component<Props, State> {
-
-        ctx: Context;
+    export class Component extends React.Component<Props, State> {
 
         constructor(props: Props) {
 
@@ -54,39 +46,34 @@ export namespace Home {
 
             }
 
-            this.ctx = Configuraton.modules.common.context.pages.home
-
         }
 
         render(): React.ReactNode {
-
-            console.log(this.ctx)
             
             return (
 
-                <article className="home__page page">
-
-                    <header className="home__header">
-
-                        <h1 className="home__page-heading">
-                            { this.ctx.language.headings.page_title }
-                        </h1>
-
-                    </header>
-
-                    <section className="home__section">
-
-                    <NavigationList.Component />
-                        
-                    </section>
-
-                </article>
+                <Link
+                    to={ this.props.route.path }
+                    className="navigation-item"
+                >
+                    {
+                        this.props.route?.icon
+                            ? (
+                                <>
+                                    <Icon.Component type={ this.props.route.icon } />
+                                    <span>
+                                        { this.props.route.name }
+                                    </span>
+                                </>
+                            )
+                            : this.props.route.name
+                    }
+                </Link>
 
             )
 
         }
 
     }
-
 
 }

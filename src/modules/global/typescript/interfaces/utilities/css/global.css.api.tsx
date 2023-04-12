@@ -40,16 +40,16 @@ export namespace CSS {
     
             export enum BackgroundColor {
     
-                Primary = "--button-primary__background-color",
-                PrimaryActive = "--button-primary__background-color--active",
-                PrimaryDisabled = "--button-primary__background-color--disabled",
-                PrimaryFocus = "--button-primary__background-color--focus",
-                PrimaryHover = "--button-primary__background-color--hover",
-                Secondary = "--button-secondary__background-color",
-                SecondaryActive = "--button-secondary__background-color--active",
-                SecondaryDisabled = "--button-secondary__background-color--disabled",
-                SecondaryFocus = "--button-secondary__background-color--focus",
-                SecondaryHover = "--button-secondary__background-color--hover"
+                Primary = "----button-primary__background-color",
+                PrimaryActive = "----button-primary__background-color--active",
+                PrimaryDisabled = "----button-primary__background-color--disabled",
+                PrimaryFocus = "----button-primary__background-color--focus",
+                PrimaryHover = "----button-primary__background-color--hover",
+                Secondary = "----button-secondary__background-color",
+                SecondaryActive = "----button-secondary__background-color--active",
+                SecondaryDisabled = "----button-secondary__background-color--disabled",
+                SecondaryFocus = "----button-secondary__background-color--focus",
+                SecondaryHover = "----button-secondary__background-color--hover"
     
             }
 
@@ -153,10 +153,10 @@ export namespace CSS {
             
             export enum Border {
     
-                Primary = "--button-primary__border",
-                PrimaryActive = "--button-primary__border--active",
-                Secondary = "--button-secondary__border",
-                SecondaryActive = "--button-secondary__border--active",
+                Primary = "----button-primary__border",
+                PrimaryActive = "----button-primary__border--active",
+                Secondary = "----button-secondary__border",
+                SecondaryActive = "----button-secondary__border--active",
     
             }
 
@@ -212,16 +212,16 @@ export namespace CSS {
     
             export enum Color {
     
-                Primary = "--button-primary__color",
-                PrimaryActive = "--button-primary__color--active",
-                PrimaryDisabled = "--button-primary__color--disabled",
-                PrimaryFocus = "--button-primary__color--focus",
-                PrimaryHover = "--button-primary__color--hover",
-                Secondary = "--button-secondary__color",
-                SecondaryActive = "--button-secondary__color--active",
-                SecondaryDisabled = "--button-secondary__color--disabled",
-                SecondaryFocus = "--button-secondary__color--focus",
-                SecondaryHover = "--button-secondary__color--hover"
+                Primary = "----button-primary__color",
+                PrimaryActive = "----button-primary__color--active",
+                PrimaryDisabled = "----button-primary__color--disabled",
+                PrimaryFocus = "----button-primary__color--focus",
+                PrimaryHover = "----button-primary__color--hover",
+                Secondary = "----button-secondary__color",
+                SecondaryActive = "----button-secondary__color--active",
+                SecondaryDisabled = "----button-secondary__color--disabled",
+                SecondaryFocus = "----button-secondary__color--focus",
+                SecondaryHover = "----button-secondary__color--hover"
     
             }
 
@@ -335,11 +335,11 @@ export namespace CSS {
 
         export enum Breakpoint {
 
-            Small = "----breakpoint--small",
-            Medium = "----breakpoint--medium",
-            Large = "----breakpoint--large",
-            XLarge = "----breakpoint--x-large",
-            XXLarge = "----breakpoint--xx-large"
+            Small = "------breakpoint--small",
+            Medium = "------breakpoint--medium",
+            Large = "------breakpoint--large",
+            XLarge = "------breakpoint--x-large",
+            XXLarge = "------breakpoint--xx-large"
 
         }
 
@@ -400,15 +400,15 @@ export namespace CSS {
 
         export enum Color {
 
-            Primary = "----color--primary",
-            Secondary = "----color--secondary",
-            Red = "----color--red",
-            Orange = "----color--orange",
-            Yellow = "----color--yellow",
-            Green = "----color--green",
-            Blue = "----color--blue",
-            Purple = "----color--purple",
-            Pink = "----color--pink",
+            Primary = "------color--primary",
+            Secondary = "------color--secondary",
+            Red = "------color--red",
+            Orange = "------color--orange",
+            Yellow = "------color--yellow",
+            Green = "------color--green",
+            Blue = "------color--blue",
+            Purple = "------color--purple",
+            Pink = "------color--pink",
 
         }
 
@@ -497,8 +497,8 @@ export namespace CSS {
 
         export enum FontFamily {
 
-            Primary = "----font-family--primary",
-            Secondary = "----font-family--secondary"
+            Primary = "------font-family--primary",
+            Secondary = "------font-family--secondary"
 
         }
 
@@ -539,13 +539,13 @@ export namespace CSS {
 
         export enum FontSize {
 
-            Root = "----font-size--root",
-            H1 = "----font-size--h1",
-            H2 = "----font-size--h2",
-            H3 = "----font-size--h3",
-            H4 = "----font-size--h4",
-            H5 = "----font-size--h5",
-            H6 = "----font-size--h6"
+            Root = "------font-size--root",
+            H1 = "------font-size--h1",
+            H2 = "------font-size--h2",
+            H3 = "------font-size--h3",
+            H4 = "------font-size--h4",
+            H5 = "------font-size--h5",
+            H6 = "------font-size--h6"
 
         }
 

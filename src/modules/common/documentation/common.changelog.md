@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This document contains all of the changes to ASTRA's `common` module by version.
+This document contains all of the changes to the `common` module by version.
 
 ## v0.1.0
 
@@ -23,8 +23,15 @@ This document contains all of the changes to ASTRA's `common` module by version.
         - [common.context.api.md](../typescript/interfaces/configuration/context/common.context.api.md)
         - [common.context.api.tsx](../typescript/interfaces/configuration/context/common.context.api.tsx)
 
+- Add SCSS files: <sup>[#1]</sup>
+    - [_common.mixins.scss](../assets/scss/_common.mixins.scss)
+    - [_common.resets.scss](../assets/scss/_common.resets.scss)
+    - [_common.utilities.scss](../assets/scss/_common.utilities.scss)
+    - [_common.variables.scss](../assets/scss/_common.variables.scss)
+    - [common.index.scss](../assets/scss/common.index.scss)
 
-[#1]: <https://github.com/davidfioravanti/astra/issues/1> (1-feature/initial-development)
+- Add page template SCSS files: <sup>[#1]</sup>
+    - [_common.home.page.scss](../assets/scss/templates/pages/_common.home.page.scss)
 
 ### Refactors
 
@@ -33,3 +40,5 @@ This document contains all of the changes to ASTRA's `common` module by version.
 ### Bug Fixes
 
 - N/A
+
+[#1]: <https://github.com/davidfioravanti/astra/issues/1> (1-feature/initial-development)

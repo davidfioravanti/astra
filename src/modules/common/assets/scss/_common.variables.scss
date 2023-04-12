@@ -1,0 +1,57 @@
+// * =========================================================================
+// * COMMON - DEFAULT VARIABLES - COLORS
+// * =========================================================================
+
+$common----color--primary: #ffffff;
+$common----color--secondary: #000000;
+
+// * =========================================================================
+// * COMMON - ELEMENT VARIABLES - BUTTON - BACKGROUND COLORS
+// * =========================================================================
+
+$common--button-primary__background-color: #000000;
+$common--button-primary__background-color--active: #000000;
+$common--button-primary__background-color--disabled: #000000;
+$common--button-primary__background-color--focus: #000000;
+$common--button-primary__background-color--hover: #000000;
+
+// * =========================================================================
+// * COMMON - ELEMENT VARIABLES - BUTTON - COLORS
+// * =========================================================================
+
+$common--button-primary__color: #ffffff;
+$common--button-primary__color--active: #ffffff;
+$common--button-primary__color--disabled: #ffffff;
+$common--button-primary__color--hover: #ffffff;
+$common--button-primary__color--focus: #ffffff;
+
+:root {
+
+    // * =========================================================================
+    // * COMMON - CSS DEFAULT VARIABLES - COLORS
+    // * =========================================================================
+
+    --common----color-primary: #{$common----color--primary};
+    --common----color-secondary: #{$common----color--secondary};
+
+    // * =========================================================================
+    // * COMMON - CSS ELEMENT VARIABLES - BUTTON - BACKGROUND COLORS
+    // * =========================================================================
+
+    --common--button-primary__background-color: #{$common--button-primary__background-color};
+    --common--button-primary__background-color--active: #{$common--button-primary__background-color--active};
+    --common--button-primary__background-color--disabled: #{$common--button-primary__background-color--disabled};
+    --common--button-primary__background-color--focus: #{$common--button-primary__background-color--focus};
+    --common--button-primary__background-color--hover: #{$common--button-primary__background-color--hover};
+
+    // * =========================================================================
+    // * COMMON - CSS ELEMENT VARIABLES - BUTTON - COLORS
+    // * =========================================================================
+
+    --common--button-primary__color: #{$common--button-primary__color};
+    --common--button-primary__color--active: #{$common--button-primary__color--active};
+    --common--button-primary__color--disabled: #{$common--button-primary__color--disabled};
+    --common--button-primary__color--focus: #{$common--button-primary__color--focus};
+    --common--button-primary__color--hover: #{$common--button-primary__color--hover};
+
+}

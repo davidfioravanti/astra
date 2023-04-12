@@ -26,7 +26,7 @@ type Version = {
     patch: Readonly<number>,
 
     /**
-     * The current version modifier of the application.
+     *     The current version modifier of the application.
      * Generally used for release versioning.
      * @version 0.1.0
      */
@@ -34,7 +34,7 @@ type Version = {
     modifier?: Readonly<string>,
 
     /**
-     * A short description that depicts the purpose of
+     *     A short description that depicts the purpose of
      * the version release (e.g. new feature sets).
      * @version 0.1.0
      */
@@ -46,7 +46,7 @@ type Version = {
 export type Settings = {
 
     /**
-     * A field that contains the application name as it should
+     *     A field that contains the application name as it should
      * appear throughout the application UI.
      * @version 0.1.0
      */
@@ -54,7 +54,7 @@ export type Settings = {
     name: Readonly<string>,
 
     /**
-     * An object whose fields denote the current version
+     *     An object whose fields denote the current version
      * of the application as it should appear in application UI
      * and for version comparison.
      * @version 0.1.0
@@ -64,7 +64,7 @@ export type Settings = {
     version: Readonly<Version>,
 
     /**
-     * A boolean field that determines whether or not the application
+     *     A boolean field that determines whether or not the application
      * should be run in development mode to facilitate testing.
 
      * @version 0.1.0

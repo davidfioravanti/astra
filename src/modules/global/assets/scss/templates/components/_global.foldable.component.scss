@@ -10,7 +10,7 @@
 
 .foldable[data-foldable--is-folded="false"]
 .foldable-control {
-    background-color: $--color--primary;
+    background-color: $----color--primary;
 }
 
 .foldable[data-foldable--is-folded="false"]
@@ -31,7 +31,7 @@
     font-size: 24px;
     margin: auto auto auto 0;
     font-weight: bold;
-    font-family: $--font-family--primary;
+    font-family: $----font-family--primary;
 }
 
 .foldable-control__icon {

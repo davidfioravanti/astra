@@ -1,185 +1,199 @@
 // ===============================================================================
-//     In order to differentiate "global" variables from element specific ones,
-// a double dash is added as a prefix to the variable name. These variables are
-// meant to be defaults used throughout the application.
+//     SCSS variables, mixins and functions within the "global" module have no
+// module name in their prefix. This means that global module variables will begin
+// with a series of dashes making them appear first in intellisense. "Default"
+// variables/mixins/functions will be prefixed with four dashes, signifying that
+// they are not element specific and should be used as defaults throughout the
+// application's various stylesheets. 
+//
+// Here are a few examples of how variable names correspond to their module:
+//
+// Global Module - Default Variable: $----color--red
+// Common Module - Default Variable: $common----color--red
+//
+// Global Module - Element Variable: $--button-primary__background-color
+// Common Module - Element Variable: $common--button-primary__background-color
 // ===============================================================================
 
 // * =========================================================================
-// * "GLOBAL" VARIABLES - BREAKPOINTS
+// * GLOBAL - DEFAULT VARIABLES - BREAKPOINTS
 // * =========================================================================
 
-$--breakpoint--small: 320px;
-$--breakpoint--medium: 640px;
-$--breakpoint--large: 1024px;
-$--breakpoint--x-large: 1200px;
-$--breakpoint--xx-large: 1440px;
+$----breakpoint--small: 320px;
+$----breakpoint--medium: 640px;
+$----breakpoint--large: 1024px;
+$----breakpoint--x-large: 1200px;
+$----breakpoint--xx-large: 1440px;
 
 // * =========================================================================
-// * "GLOBAL" VARIABLES - COLORS
+// * GLOBAL - DEFAULT VARIABLES - COLORS
 // * =========================================================================
 
-$--color--primary: #282828;
-$--color--secondary: #ffffff;
-$--color--red: #a53030;
-$--color--orange: #da863e;
-$--color--yellow: #e8c170;
-$--color--green: #75a743;
-$--color--blue: #4f8fba;
-$--color--purple: #7a367b;
-$--color--pink: #c65197;
+$----color--primary: #282828;
+$----color--secondary: #ffffff;
+$----color--red: #a53030;
+$----color--orange: #da863e;
+$----color--yellow: #e8c170;
+$----color--green: #75a743;
+$----color--blue: #4f8fba;
+$----color--purple: #7a367b;
+$----color--pink: #c65197;
 
 // * =========================================================================
-// * "GLOBAL" VARIABLES - FONT FAMILIES
+// * GLOBAL - DEFAULT VARIABLES - FONT FAMILIES
 // * =========================================================================
 
-$--font-family--primary: "Roboto Slab", serif;
-$--font-family--secondary: "Roboto Mono", monospace;
+$----font-family--primary: "Roboto Slab", serif;
+$----font-family--secondary: "Roboto Mono", monospace;
 
 // * =========================================================================
-// * "GLOBAL" VARIABLES - FONT SIZES
+// * GLOBAL - DEFAULT VARIABLES - FONT SIZES
 // * =========================================================================
 
-$--font-size--root: 1rem;
-$--font-size--h1: 2.5rem;
-$--font-size--h2: 2rem;
-$--font-size--h3: 1.75rem;
-$--font-size--h4: 1.5rem;
-$--font-size--h5: 1.25rem;
-$--font-size--h6: 1rem;
+$----font-size--root: 1rem;
+$----font-size--h1: 2.5rem;
+$----font-size--h2: 2rem;
+$----font-size--h3: 1.75rem;
+$----font-size--h4: 1.5rem;
+$----font-size--h5: 1.25rem;
+$----font-size--h6: 1rem;
 
 // * =========================================================================
-// * ELEMENT VARIABLES - BUTTON - BACKGROUND COLORS
+// * GLOBAL - ELEMENT VARIABLES - BUTTON - BACKGROUND COLORS
 // * =========================================================================
 
-$button-primary__background-color: #ffffff;
-$button-primary__background-color--active: #ffffff;
-$button-primary__background-color--disabled: #ffffff;
-$button-primary__background-color--focus: #ffffff;
-$button-primary__background-color--hover: #ffffff;
+$--button-primary__background-color: #ffffff;
+$--button-primary__background-color--active: #ffffff;
+$--button-primary__background-color--disabled: #ffffff;
+$--button-primary__background-color--focus: #ffffff;
+$--button-primary__background-color--hover: #ffffff;
 
-$button-secondary__background-color: #ffffff;
-$button-secondary__background-color--active: #ffffff;
-$button-secondary__background-color--disabled: #ffffff;
-$button-secondary__background-color--focus: #ffffff;
-$button-secondary__background-color--hover: #ffffff;
-
-// * =========================================================================
-// * ELEMENT VARIABLES - BUTTON - BORDERS
-// * =========================================================================
-
-$button-primary__border: #000000;
-$button-primary__border--active: #000000;
-
-$button-secondary__border: #ffffff;
-$button-secondary__border--active: #ffffff;
+$--button-secondary__background-color: #ffffff;
+$--button-secondary__background-color--active: #ffffff;
+$--button-secondary__background-color--disabled: #ffffff;
+$--button-secondary__background-color--focus: #ffffff;
+$--button-secondary__background-color--hover: #ffffff;
 
 // * =========================================================================
-// * ELEMENT VARIABLES - BUTTON - COLORS
+// * GLOBAL - ELEMENT VARIABLES - BUTTON - BORDERS
 // * =========================================================================
 
-$button-primary__color: #000000;
-$button-primary__color--active: #000000;
-$button-primary__color--disabled: #000000;
-$button-primary__color--focus: #000000;
-$button-primary__color--hover: #000000;
+$--button-primary__border: #000000;
+$--button-primary__border--active: #000000;
 
-$button-secondary__color: #000000;
-$button-secondary__color--active: #000000;
-$button-secondary__color--disabled: #000000;
-$button-secondary__color--focus: #000000;
-$button-secondary__color--hover: #000000;
+$--button-secondary__border: #ffffff;
+$--button-secondary__border--active: #ffffff;
+
+// * =========================================================================
+// * GLOBAL - ELEMENT VARIABLES - BUTTON - COLORS
+// * =========================================================================
+
+$--button-primary__color: #000000;
+$--button-primary__color--active: #000000;
+$--button-primary__color--disabled: #000000;
+$--button-primary__color--focus: #000000;
+$--button-primary__color--hover: #000000;
+
+$--button-secondary__color: #000000;
+$--button-secondary__color--active: #000000;
+$--button-secondary__color--disabled: #000000;
+$--button-secondary__color--focus: #000000;
+$--button-secondary__color--hover: #000000;
 
 // ===============================================================================
-//     In order to access SCSS variables in TS files, native root CSS variables
+//     In order to access SCSS variables in TS files, native "root" CSS variables
 // must be created and mapped to their SCSS counterparts. The global module's CSS
 // API, used to get and expose these variables, should contain variable mappings.
+// These variables, in order to be "root" CSS variables, have a "--" prefix that
+// gets added to every variable name. This additional dashes are added onto the
+// SCSS variable name that corresponds to it, creating a native CSS variable. 
 // ===============================================================================
 
 :root {
 
     // * =========================================================================
-    // * CSS VARIABLES - GLOBAL - BREAKPOINTS
+    // * GLOBAL - CSS DEFAULT VARIABLES - BREAKPOINTS
     // * =========================================================================
 
-    ----breakpoint--small: #{$--breakpoint--small};
-    ----breakpoint--medium: #{$--breakpoint--medium};
-    ----breakpoint--large: #{$--breakpoint--large};
-    ----breakpoint--x-large: #{$--breakpoint--x-large};
-    ----breakpoint--xx-large: #{$--breakpoint--xx-large};
+    ------breakpoint--small: #{$----breakpoint--small};
+    ------breakpoint--medium: #{$----breakpoint--medium};
+    ------breakpoint--large: #{$----breakpoint--large};
+    ------breakpoint--x-large: #{$----breakpoint--x-large};
+    ------breakpoint--xx-large: #{$----breakpoint--xx-large};
 
     // * =========================================================================
-    // * CSS GLOBAL VARIABLES - COLORS
+    // * GLOBAL - CSS DEFAULT VARIABLES - COLORS
     // * =========================================================================
 
-    ----color--primary: #{$--color--primary};
-    ----color--secondary: #{$--color--secondary};
-    ----color--red: #{$--color--red};
-    ----color--orange: #{$--color--orange};
-    ----color--yellow: #{$--color--yellow};
-    ----color--green: #{$--color--green};
-    ----color--blue: #{$--color--blue};
-    ----color--purple: #{$--color--purple};
-    ----color--pink: #{$--color--pink};
+    ------color--primary: #{$----color--primary};
+    ------color--secondary: #{$----color--secondary};
+    ------color--red: #{$----color--red};
+    ------color--orange: #{$----color--orange};
+    ------color--yellow: #{$----color--yellow};
+    ------color--green: #{$----color--green};
+    ------color--blue: #{$----color--blue};
+    ------color--purple: #{$----color--purple};
+    ------color--pink: #{$----color--pink};
 
     // * =========================================================================
-    // * CSS GLOBAL VARIABLES - FONT FAMILIES
+    // * GLOBAL - CSS DEFAULT VARIABLES - FONT FAMILIES
     // * =========================================================================
 
-    ----font-family--primary: #{$--font-family--primary};
-    ----font-family--secondary: #{$--font-family--secondary};
+    ------font-family--primary: #{$----font-family--primary};
+    ------font-family--secondary: #{$----font-family--secondary};
 
     // * =========================================================================
-    // * CSS GLOBAL VARIABLES - FONT SIZES
+    // * GLOBAL - CSS DEFAULT VARIABLES - FONT SIZES
     // * =========================================================================
 
-    ----font-size--root: #{$--font-size--root};
-    ----font-size--h1: #{$--font-size--h1};
-    ----font-size--h2: #{$--font-size--h2};
-    ----font-size--h3: #{$--font-size--h3};
-    ----font-size--h4: #{$--font-size--h4};
-    ----font-size--h5: #{$--font-size--h5};
-    ----font-size--h6: #{$--font-size--h6};
+    ------font-size--root: #{$----font-size--root};
+    ------font-size--h1: #{$----font-size--h1};
+    ------font-size--h2: #{$----font-size--h2};
+    ------font-size--h3: #{$----font-size--h3};
+    ------font-size--h4: #{$----font-size--h4};
+    ------font-size--h5: #{$----font-size--h5};
+    ------font-size--h6: #{$----font-size--h6};
     
     // * =========================================================================
-    // * CSS ELEMENT VARIABLES - BUTTON - BACKGROUND COLORS
+    // * GLOBAL - CSS ELEMENT VARIABLES - BUTTON - BACKGROUND COLORS
     // * =========================================================================
 
-    --button-primary__background-color: #{$button-primary__background-color};
-    --button-primary__background-color--active: #{$button-primary__background-color--active};
-    --button-primary__background-color--disabled: #{$button-primary__background-color--disabled};
-    --button-primary__background-color--focus: #{$button-primary__background-color--focus};
-    --button-primary__background-color--hover: #{$button-primary__background-color--hover};
+    ----button-primary__background-color: #{$--button-primary__background-color};
+    ----button-primary__background-color--active: #{$--button-primary__background-color--active};
+    ----button-primary__background-color--disabled: #{$--button-primary__background-color--disabled};
+    ----button-primary__background-color--focus: #{$--button-primary__background-color--focus};
+    ----button-primary__background-color--hover: #{$--button-primary__background-color--hover};
 
-    --button-secondary__background-color: #{$button-secondary__background-color};
-    --button-secondary__background-color--active: #{$button-secondary__background-color--active};
-    --button-secondary__background-color--disabled: #{$button-secondary__background-color--disabled};
-    --button-secondary__background-color--focus: #{$button-secondary__background-color--focus};
-    --button-secondary__background-color--hover: #{$button-secondary__background-color--hover};
+    ----button-secondary__background-color: #{$--button-secondary__background-color};
+    ----button-secondary__background-color--active: #{$--button-secondary__background-color--active};
+    ----button-secondary__background-color--disabled: #{$--button-secondary__background-color--disabled};
+    ----button-secondary__background-color--focus: #{$--button-secondary__background-color--focus};
+    ----button-secondary__background-color--hover: #{$--button-secondary__background-color--hover};
 
     // * =========================================================================
-    // * CSS ELEMENT VARIABLES - BUTTON - BORDERS
+    // * GLOBAL - CSS ELEMENT VARIABLES - BUTTON - BORDERS
     // * =========================================================================
 
-    --button-primary__border: #{$button-primary__border};
-    --button-primary__border--active: #{$button-primary__border--active};
+    ----button-primary__border: #{$--button-primary__border};
+    ----button-primary__border--active: #{$--button-primary__border--active};
     
-    --button-secondary__border: #{$button-secondary__border};
-    --button-secondary__border--active: #{$button-primary__border--active};
+    ----button-secondary__border: #{$--button-secondary__border};
+    ----button-secondary__border--active: #{$--button-primary__border--active};
 
     // * =========================================================================
-    // * CSS ELEMENT VARIABLES - BUTTON - COLORS
+    // * GLOBAL - CSS ELEMENT VARIABLES - BUTTON - COLORS
     // * =========================================================================
 
-    --button-primary__color: #{$button-primary__color};
-    --button-primary__color--active: #{$button-primary__color--active};
-    --button-primary__color--disabled: #{$button-primary__color--disabled};
-    --button-primary__color--focus: #{$button-primary__color--focus};
-    --button-primary__color--hover: #{$button-primary__color--hover};
+    ----button-primary__color: #{$--button-primary__color};
+    ----button-primary__color--active: #{$--button-primary__color--active};
+    ----button-primary__color--disabled: #{$--button-primary__color--disabled};
+    ----button-primary__color--focus: #{$--button-primary__color--focus};
+    ----button-primary__color--hover: #{$--button-primary__color--hover};
 
-    --button-secondary__color: #{$button-secondary__color};
-    --button-secondary__color--active: #{$button-secondary__color--active};
-    --button-secondary__color--disabled: #{$button-secondary__color--disabled};
-    --button-secondary__color--focus: #{$button-secondary__color--focus};
-    --button-secondary__color--hover: #{$button-secondary__color--hover};
+    ----button-secondary__color: #{$--button-secondary__color};
+    ----button-secondary__color--active: #{$--button-secondary__color--active};
+    ----button-secondary__color--disabled: #{$--button-secondary__color--disabled};
+    ----button-secondary__color--focus: #{$--button-secondary__color--focus};
+    ----button-secondary__color--hover: #{$--button-secondary__color--hover};
 
 }

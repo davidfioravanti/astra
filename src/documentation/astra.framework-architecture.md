@@ -19,7 +19,7 @@ The core principles for developing and working within ASTRA's ecosystem are simp
 
 ## Naming Conventions
 
-In order to keep the application easy to navigate and modify, certain naming conventions should be upheld throughout the application. 
+In order to keep the application easy to navigate and modify, certain naming conventions should be upheld throughout the application.
 
 ### Universal File/Folder Naming Conventions
 

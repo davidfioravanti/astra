@@ -68,6 +68,7 @@ This document contains all of the changes to ASTRA's `global` module by version.
     - [_global.resets.scss](../assets/scss/_global.resets.scss)
     - [_global.utilities.scss](../assets/scss/_global.utilities.scss)
     - [_global.variables.scss](../assets/scss/_global.variables.scss)
+    - [global.index.scss](../assets/scss/global.index.scss)
 
 - Add component template SCSS files: <sup>[#1]</sup>
     - [_global.foldable.component.scss](../assets/scss/templates/components/_global.foldable.component.scss)
