@@ -4,6 +4,8 @@
 
 import { Foldable } from "../../../global.reducer";
 import { Icon } from "../../../global.reducer";
+import { NavigationItem } from "../../../global.reducer";
+import { NavigationList } from "../../../global.reducer";
 
 // * =========================================================================
 // * PAGE IMPORTS
@@ -20,7 +22,9 @@ export type Context = {
     components: {
 
         foldable: Foldable.Context,
-        icon: Icon.Context
+        icon: Icon.Context,
+        navigation_item: NavigationItem.Context,
+        navigation_list: NavigationList.Context
 
     },
 

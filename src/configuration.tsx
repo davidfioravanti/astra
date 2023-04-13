@@ -64,6 +64,14 @@ export namespace Configuraton {
 
                     },
 
+                    navigation_item: {
+
+                    },
+
+                    navigation_list: {
+                        
+                    }
+
                 },
 
                 layouts: {

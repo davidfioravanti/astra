@@ -21,11 +21,15 @@ This document contains all of the changes to ASTRA's `global` module by version.
         - [global.icon.component.md](../typescript/templates/components/icon/global.icon.component.md)
         - [global.icon.component.tsx](../typescript/templates/components/icon/global.icon.component.tsx)
 
-- Add page templates: <sup>[#1]</sup>
+    - Add `NavigationItem` component
+        - [global.navigation-item.component.md](../typescript/templates/components/navigation-item/global.navigation-item.component.md)
+        - [global.navigation-item.component.tsx](../typescript/templates/components/navigation-item/global.navigation-item.component.tsx)
 
-    - Add `Home` page
-        - [global.home.page.md](../typescript/templates/pages/home/global.home.page.md)
-        - [global.home.page.tsx](../typescript/templates/pages/home/global.home.page.tsx)
+    - Add `NavigationList` component
+        - [global.navigation-list.component.md](../typescript/templates/components/navigation-list/global.navigation-list.component.md)
+        - [global.navigation-list.component.tsx](../typescript/templates/components/navigation-list/global.navigation-list.component.tsx)
+
+- Add page templates: <sup>[#1]</sup>
 
     - Add `KitchenSink` page
         - [global.kitchen-sink.md](../typescript/templates/pages/kitchen-sink/global.kitchen-sink.page.md)
@@ -73,6 +77,8 @@ This document contains all of the changes to ASTRA's `global` module by version.
 - Add component template SCSS files: <sup>[#1]</sup>
     - [_global.foldable.component.scss](../assets/scss/templates/components/_global.foldable.component.scss)
     - [_global.icon.component.scss](../assets/scss/templates/components/_global.icon.component.scss)
+    - [_global.navigation-item.component.scss](../assets/scss/templates/components/_global.navigation-item.component.scss)
+    - [_global.navigation-list.component.scss](../assets/scss/templates/components/_global.navigation-list.component.scss)
 
 - Add page template SCSS files: <sup>[#1]</sup>
     - [_global.kitchen-sink.page.scss](../assets/scss/templates/pages/_global.kitchen-sink.page.scss)

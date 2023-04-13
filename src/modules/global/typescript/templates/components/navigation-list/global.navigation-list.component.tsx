@@ -7,6 +7,7 @@ import React from "react";
 import { Configuraton } from "../../../../../../configuration";
 import { Formatting } from "../../../global.reducer";
 import { NavigationItem } from "../../../global.reducer";
+import { Routing } from "../../../global.reducer";
 
 // * =========================================================================
 // * EXPORTS
@@ -19,6 +20,8 @@ export namespace NavigationList {
     // * =========================================================================
 
     export type Props = {
+
+        routing?: Routing
 
     }
 
@@ -36,6 +39,8 @@ export namespace NavigationList {
 
     export class Component extends React.Component<Props, State> {
 
+        ctx: Context;
+
         constructor(props: Props) {
 
             super(props);
@@ -44,13 +49,24 @@ export namespace NavigationList {
 
             }
 
+            this.ctx = Configuraton
+                .modules
+                .global
+                .context
+                .components
+                .navigation_list;
+
         }
 
         render(): React.ReactNode {
 
             let navigationItems: Array<JSX.Element> = [];
 
-            Configuraton.routing.map((route) => {
+            const routes = this.props.routing != undefined 
+                ? this.props.routing 
+                : Configuraton.routing;
+
+            routes.map((route) => {
 
                 const renderCondition = route.options?.navigation_hidden;
 
@@ -64,8 +80,9 @@ export namespace NavigationList {
                             key={ `navigation__list-item--${formattedName}` }
                             className={
                                 [
-                                    `navigation__list-item--${formattedName}`
-                                ].join("")
+                                    `navigation__list-item--${formattedName}`,
+                                    `navigation__list-item`
+                                ].join(" ")
                             }
                         >
 

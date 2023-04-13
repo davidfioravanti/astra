@@ -28,5 +28,7 @@ Here you will find links to all of the available documentation for ASTRA's `glob
     - Components
         - [Global - Foldable Component](../typescript/templates/components/foldable/global.foldable.component.md)
         - [Global - Icon Component](../typescript/templates/components/icon/global.icon.component.md)
+        - [Global - Navigation Item Component](../typescript/templates/components/navigation-item/global.navigation-item.component.md)
+        - [Global - Navigation List Component](../typescript/templates/components/navigation-list/global.navigation-list.component.md)
     - Pages
         - [Global - Kitchen Sink Page](../typescript/templates/pages/kitchen-sink/global.kitchen-sink.page.md)

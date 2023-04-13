@@ -69,14 +69,16 @@ export namespace Home {
                     <header className="home__header">
 
                         <h1 className="home__page-heading">
+
                             { this.ctx.language.headings.page_title }
+
                         </h1>
 
                     </header>
 
                     <section className="home__section">
 
-                    <NavigationList.Component />
+                        <NavigationList.Component />
                         
                     </section>
 

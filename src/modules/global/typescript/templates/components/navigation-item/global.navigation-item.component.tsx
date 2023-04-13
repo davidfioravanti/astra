@@ -4,6 +4,7 @@
 
 import React from "react";
 
+import { Configuraton } from "../../../../../../configuration";
 import { Icon } from "../../../global.reducer";
 import { Link } from "react-router-dom";
 import { Routing } from "../../../global.reducer";
@@ -38,6 +39,8 @@ export namespace NavigationItem {
 
     export class Component extends React.Component<Props, State> {
 
+        ctx: Context;
+
         constructor(props: Props) {
 
             super(props);
@@ -46,9 +49,20 @@ export namespace NavigationItem {
 
             }
 
+            this.ctx = Configuraton
+                .modules
+                .global
+                .context
+                .components
+                .navigation_item;
+
+            console.log(this)
+
         }
 
         render(): React.ReactNode {
+
+            console.log(this.ctx)
             
             return (
 
@@ -60,8 +74,8 @@ export namespace NavigationItem {
                         this.props.route?.icon
                             ? (
                                 <>
-                                    <Icon.Component type={ this.props.route.icon } />
-                                    <span>
+                                    <Icon.Component className="navigation-item__icon" type={ this.props.route.icon } />
+                                    <span className="navigation-item__label">
                                         { this.props.route.name }
                                     </span>
                                 </>

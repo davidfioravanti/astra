@@ -26,6 +26,12 @@ export namespace Formatting {
 
     export namespace String {
 
+        /**
+         *     An enum containing all of the string cases that have
+         * conversion and formatting support.
+         * @version 0.1.0
+         */
+
         export enum Case {
 
             Camel = "camel",
@@ -76,6 +82,13 @@ export namespace Formatting {
 
         }
 
+        /**
+         * A function that converts a string to kebab case (e.g. "this-is-kebab-case").
+         * @param str - The string that will be converted to kebab case.
+         * @returns The input string converted to kebab case.
+         * @version 0.1.0
+         */
+
         export function toKebabCase(str: string) {
 
             return str
@@ -84,6 +97,15 @@ export namespace Formatting {
                 .toLowerCase();
 
         }
+
+        /**
+         *     A function that converts a string to title case (e.g. "This is Title Case"). 
+         * Accepts an optional "options" object in which exclusions can be specified that ignore 
+         * certain substrings when applying title case formatting.
+         * @param str - The string that will be converted to kebab case.
+         * @returns The input string converted to title case (minus optional exclusions).
+         * @version 0.1.0
+         */
 
         export function toTitleCase(
             str: string, 

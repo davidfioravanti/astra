@@ -7,6 +7,17 @@
 }
 
 // * =========================================================================
+// * GLOBAL - DEFAULT MIXINS - HEADINGS
+// * =========================================================================
+
+@mixin ----heading($__size__) {
+    font-family: $----font-family--primary;
+    font-size: $__size__;
+    font-weight: bold;
+    line-height: $__size__;
+}
+
+// * =========================================================================
 // * GLOBAL - DEFAULT MIXINS - BREAKPOINTS
 // * =========================================================================
 
@@ -68,4 +79,43 @@
     @media (max-width: #{$----breakpoint--xx-large}) {
         @content;
     }
+}
+
+// * =========================================================================
+// * GLOBAL - ELEMENT MIXINS - HEADINGS
+// * =========================================================================
+
+@mixin --h1 {
+    @include ----heading($----font-size--h1);
+}
+
+@mixin --h2 {
+    @include ----heading($----font-size--h2);
+}
+
+@mixin --h3 {
+    @include ----heading($----font-size--h3);
+}
+
+@mixin --h4 {
+    @include ----heading($----font-size--h4);
+}
+
+@mixin --h5 {
+    @include ----heading($----font-size--h5);
+}
+
+@mixin --h6 {
+    @include ----heading($----font-size--h6);
+}
+
+// * =========================================================================
+// * GLOBAL - ELEMENT MIXINS - TEXT
+// * =========================================================================
+
+@mixin --p {
+    font-family: $----font-family--primary;
+    font-size: $----font-size--root;
+    font-weight: normal;
+    line-height: $----font-size--root;
 }

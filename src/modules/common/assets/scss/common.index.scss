@@ -2,6 +2,11 @@
 // * COMMON - DEFAULT IMPORTS
 // * ==========================================================
 
+@import "../../../global/assets/scss/global.mixins";
+@import "../../../global/assets/scss/global.resets";
+@import "../../../global/assets/scss/global.utilities";
+@import "../../../global/assets/scss/global.variables";
+
 @import "./common.resets";
 @import "./common.variables";
 @import "./common.mixins";
