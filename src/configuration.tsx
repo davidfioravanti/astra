@@ -1,11 +1,15 @@
 // * =========================================================================
-// * IMPORTS - CONFIGURATON
+// * IMPORTS
 // * =========================================================================
-
-import { Icon } from "./modules/global/typescript/global.reducer";
 
 import * as Common from "./modules/common/typescript/common.reducer";
 import * as Global from "./modules/global/typescript/global.reducer";
+
+// * =========================================================================
+// * ALIASES
+// * =========================================================================
+
+import Icon = Global.Icon;
 
 // * =========================================================================
 // * EXPORTS

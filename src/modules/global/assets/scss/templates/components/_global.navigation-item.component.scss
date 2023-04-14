@@ -20,7 +20,7 @@
 .navigation-item {
     
     &__label {
-        @include ----breakpoint__medium--below {
+        @include ----breakpoint-medium--below {
             display: none;
         }
     }

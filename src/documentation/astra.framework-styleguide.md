@@ -30,7 +30,7 @@ Variables that exist to be used generically throughout the application are refer
 
 ```scss
 // Global Module:
-$----breakpoint--small: 320px;
+$----breakpoint-small: 320px;
 $----color--primary: #ffffff;
 
 // Common Module:

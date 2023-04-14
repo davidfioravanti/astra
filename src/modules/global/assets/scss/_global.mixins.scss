@@ -21,62 +21,62 @@
 // * GLOBAL - DEFAULT MIXINS - BREAKPOINTS
 // * =========================================================================
 
-@mixin ----breakpoint__small {
-    @media (min-width: #{$----breakpoint--small}) {
+@mixin ----breakpoint-small {
+    @media (min-width: #{$----breakpoint-small}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__small--below {
-    @media (max-width: #{$----breakpoint--small}) {
+@mixin ----breakpoint-small--below {
+    @media (max-width: #{$----breakpoint-small}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__medium {
-    @media (min-width: #{$----breakpoint--medium}) {
+@mixin ----breakpoint-medium {
+    @media (min-width: #{$----breakpoint-medium}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__medium--below {
-    @media (max-width: #{$----breakpoint--medium}) {
+@mixin ----breakpoint-medium--below {
+    @media (max-width: #{$----breakpoint-medium}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__large {
-    @media (min-width: #{$----breakpoint--large}) {
+@mixin ----breakpoint-large {
+    @media (min-width: #{$----breakpoint-large}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__large--below {
-    @media (max-width: #{$----breakpoint--large}) {
+@mixin ----breakpoint-large--below {
+    @media (max-width: #{$----breakpoint-large}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__x-large {
-    @media (min-width: #{$----breakpoint--x-large}) {
+@mixin ----breakpoint-x-large {
+    @media (min-width: #{$----breakpoint-x-large}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__x-large--below {
-    @media (max-width: #{$----breakpoint--x-large}) {
+@mixin ----breakpoint-x-large--below {
+    @media (max-width: #{$----breakpoint-x-large}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__xx-large {
-    @media (min-width: #{$----breakpoint--xx-large}) {
+@mixin ----breakpoint-xx-large {
+    @media (min-width: #{$----breakpoint-xx-large}) {
         @content;
     }
 }
 
-@mixin ----breakpoint__xx-large--below {
-    @media (max-width: #{$----breakpoint--xx-large}) {
+@mixin ----breakpoint-xx-large--below {
+    @media (max-width: #{$----breakpoint-xx-large}) {
         @content;
     }
 }

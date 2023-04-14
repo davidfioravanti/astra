@@ -56,11 +56,11 @@ export namespace KitchenSink {
 
         renderColorsSection() {
 
-            const { global } = CSS.getVariables();
+            const { generic } = CSS.getVariables();
 
             let colorsArr : Array<JSX.Element> = [];
 
-            for (const [p, [property, value]] of Object.entries(Object.entries(global.colors))) {
+            for (const [p, [property, value]] of Object.entries(Object.entries(generic.colors))) {
 
                 colorsArr.push(
 
@@ -211,7 +211,7 @@ export namespace KitchenSink {
         
         renderTypographySection() : JSX.Element {
 
-            const { global } = CSS.getVariables();
+            const { generic } = CSS.getVariables();
 
             return (
 
@@ -235,7 +235,7 @@ export namespace KitchenSink {
                             aria-hidden="true"
                         >
 
-                            Primary Font ({ global.font_families.primary })
+                            Primary Font ({ generic.font_families.primary })
 
                         </span>
 
@@ -249,7 +249,7 @@ export namespace KitchenSink {
                                     ].join(" ")
                                 }
                             >
-                                Font Size - H1 ({ global.font_sizes.h1 })
+                                Font Size - H1 ({ generic.font_sizes.h1 })
 
                             </span>
 
@@ -262,7 +262,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H2 ({ global.font_sizes.h2 })
+                                Font Size - H2 ({ generic.font_sizes.h2 })
 
                             </span>
 
@@ -275,7 +275,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H3 ({ global.font_sizes.h3 })
+                                Font Size - H3 ({ generic.font_sizes.h3 })
 
                             </span>
 
@@ -288,7 +288,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H4 ({ global.font_sizes.h4 })
+                                Font Size - H4 ({ generic.font_sizes.h4 })
 
                             </span>
 
@@ -301,7 +301,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H5 ({ global.font_sizes.h5 })
+                                Font Size - H5 ({ generic.font_sizes.h5 })
 
                             </span>
 
@@ -314,7 +314,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H6 ({ global.font_sizes.h6 })
+                                Font Size - H6 ({ generic.font_sizes.h6 })
 
                             </span>
 
@@ -327,7 +327,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - Root ({ global.font_sizes.root })
+                                Font Size - Root ({ generic.font_sizes.root })
 
                             </span>
 
@@ -343,7 +343,7 @@ export namespace KitchenSink {
                             aria-hidden="true"
                         >
 
-                                Secondary Font ({ global.font_families.secondary })
+                                Secondary Font ({ generic.font_families.secondary })
 
                         </span>
 
@@ -358,7 +358,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H1 ({ global.font_sizes.h1 })
+                                Font Size - H1 ({ generic.font_sizes.h1 })
 
                             </span>
 
@@ -371,7 +371,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H2 ({ global.font_sizes.h2 })
+                                Font Size - H2 ({ generic.font_sizes.h2 })
 
                             </span>
 
@@ -384,7 +384,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H3 ({ global.font_sizes.h3 })
+                                Font Size - H3 ({ generic.font_sizes.h3 })
 
                             </span>
 
@@ -397,7 +397,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H4 ({ global.font_sizes.h4 })
+                                Font Size - H4 ({ generic.font_sizes.h4 })
 
                             </span>
 
@@ -410,7 +410,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H5 ({ global.font_sizes.h5 })
+                                Font Size - H5 ({ generic.font_sizes.h5 })
 
                             </span>
 
@@ -423,7 +423,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - H6 ({ global.font_sizes.h6 })
+                                Font Size - H6 ({ generic.font_sizes.h6 })
 
                             </span>
 
@@ -436,7 +436,7 @@ export namespace KitchenSink {
                                 }
                             >
 
-                                Font Size - Root ({ global.font_sizes.root })
+                                Font Size - Root ({ generic.font_sizes.root })
 
                             </span>
 

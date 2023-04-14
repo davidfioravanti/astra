@@ -335,11 +335,11 @@ export namespace CSS {
 
         export enum Breakpoint {
 
-            Small = "------breakpoint--small",
-            Medium = "------breakpoint--medium",
-            Large = "------breakpoint--large",
-            XLarge = "------breakpoint--x-large",
-            XXLarge = "------breakpoint--xx-large"
+            Small = "------breakpoint-small",
+            Medium = "------breakpoint-medium",
+            Large = "------breakpoint-large",
+            XLarge = "------breakpoint-x-large",
+            XXLarge = "------breakpoint-xx-large"
 
         }
 
@@ -623,12 +623,12 @@ export namespace CSS {
     export type Variables = {
 
         /**
-         * A parent object containing a list of global properties that
+         * A parent object containing a list of generic properties that
          * are mapped to CSS/SCSS variables with appliation stylesheets.
          * @version 0.1.0
          */
 
-        global: {
+        generic: {
 
             /**
              * An object containing global color values that are mapped
@@ -678,7 +678,7 @@ export namespace CSS {
              * @version 0.1.0
              */
 
-            buttons: {
+            button: {
 
                 /**
                  * An object containing button element background color values that are mapped
@@ -728,7 +728,7 @@ export namespace CSS {
 
         const variables : Variables = {
 
-            global: {
+            generic: {
 
                 breakpoints: {
     
@@ -777,7 +777,7 @@ export namespace CSS {
 
             elements: {
 
-                buttons: {
+                button: {
 
                     background_colors: {
 

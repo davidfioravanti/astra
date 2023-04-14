@@ -1,5 +1,5 @@
 .kitchen-sink__page {
-    max-width: $----breakpoint--xx-large;
+    max-width: $----breakpoint-xx-large;
     margin: auto;
 }
 
@@ -25,16 +25,16 @@
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
     max-height: 324px;
-    max-width: $----breakpoint--xx-large;
+    max-width: $----breakpoint-xx-large;
     overflow-y: auto;
     row-gap: 8px;
     width: auto;
 
-    @include ----breakpoint__large--below {
+    @include ----breakpoint-large--below {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include ----breakpoint__medium--below {
+    @include ----breakpoint-medium--below {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -64,18 +64,18 @@
     column-gap: 8px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: $----breakpoint--xx-large;
+    max-width: $----breakpoint-xx-large;
     max-height: 324px;
     margin: auto;
     overflow-y: auto;
     row-gap: 8px;
     width: auto;
 
-    @include ----breakpoint__large--below {
+    @include ----breakpoint-large--below {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @include ----breakpoint__medium--below {
+    @include ----breakpoint-medium--below {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -93,7 +93,7 @@
     font-weight: bold;
     margin: auto 0;
 
-    @include ----breakpoint__small--below {
+    @include ----breakpoint-small--below {
         font-size: 14px;
         line-height: 24px;
     }
@@ -112,7 +112,7 @@
     grid-template-columns: repeat(1, 1fr);
     margin: auto;
     max-height: 324px;
-    max-width: $----breakpoint--xx-large;
+    max-width: $----breakpoint-xx-large;
     overflow-y: auto;
     row-gap: 8px;
     width: auto;
@@ -131,7 +131,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
 
-    @include ----breakpoint__medium--below {
+    @include ----breakpoint-medium--below {
         grid-template-columns: 1fr;
     }
 }
@@ -284,7 +284,7 @@
     user-select: none;
     writing-mode: vertical-rl;
 
-    @include ----breakpoint__medium--below {
+    @include ----breakpoint-medium--below {
         margin: 0;
         border-left: none;
         border-bottom: 2px dashed black;

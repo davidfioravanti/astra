@@ -19,11 +19,11 @@
 // * GLOBAL - DEFAULT VARIABLES - BREAKPOINTS
 // * =========================================================================
 
-$----breakpoint--small: 320px;
-$----breakpoint--medium: 640px;
-$----breakpoint--large: 1024px;
-$----breakpoint--x-large: 1200px;
-$----breakpoint--xx-large: 1440px;
+$----breakpoint-small: 320px;
+$----breakpoint-medium: 640px;
+$----breakpoint-large: 1024px;
+$----breakpoint-x-large: 1200px;
+$----breakpoint-xx-large: 1440px;
 
 // * =========================================================================
 // * GLOBAL - DEFAULT VARIABLES - COLORS
@@ -115,11 +115,11 @@ $--button-secondary__color--hover: #000000;
     // * GLOBAL - CSS DEFAULT VARIABLES - BREAKPOINTS
     // * =========================================================================
 
-    ------breakpoint--small: #{$----breakpoint--small};
-    ------breakpoint--medium: #{$----breakpoint--medium};
-    ------breakpoint--large: #{$----breakpoint--large};
-    ------breakpoint--x-large: #{$----breakpoint--x-large};
-    ------breakpoint--xx-large: #{$----breakpoint--xx-large};
+    ------breakpoint-small: #{$----breakpoint-small};
+    ------breakpoint-medium: #{$----breakpoint-medium};
+    ------breakpoint-large: #{$----breakpoint-large};
+    ------breakpoint-x-large: #{$----breakpoint-x-large};
+    ------breakpoint-xx-large: #{$----breakpoint-xx-large};
 
     // * =========================================================================
     // * GLOBAL - CSS DEFAULT VARIABLES - COLORS
