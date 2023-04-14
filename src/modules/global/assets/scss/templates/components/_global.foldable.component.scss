@@ -11,34 +11,34 @@
 .foldable[data-foldable--is-folded="false"]
 .foldable-control {
     background-color: $----color--primary;
-}
 
-.foldable[data-foldable--is-folded="false"]
-.foldable-control__label,
-.foldable[data-foldable--is-folded="false"]
-.foldable-control__icon {
-    color: white;
+    &__label,
+    &__icon {
+        color: white;
+    }
+
 }
 
 .foldable-control {
     display: flex;
     padding: 8px;
     width: 100%;
-}
 
-.foldable-control__label {
-    line-height: 24px;
-    font-size: 24px;
-    margin: auto auto auto 0;
-    font-weight: bold;
-    font-family: $----font-family--primary;
-}
+    &__label {
+        line-height: 24px;
+        font-size: 24px;
+        margin: auto auto auto 0;
+        font-weight: bold;
+        font-family: $----font-family--primary;
+    }
 
-.foldable-control__icon {
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    font-weight: bold;
-    font-display: swap;
+    &__icon {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        font-weight: bold;
+        font-display: swap;
+    }
+
 }

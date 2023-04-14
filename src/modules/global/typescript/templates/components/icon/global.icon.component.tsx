@@ -4,6 +4,8 @@
 
 import React from "react";
 
+import { Formatting } from "../../../global.reducer";
+
 // * =========================================================================
 // * EXPORTS
 // * =========================================================================
@@ -324,6 +326,7 @@ export namespace Icon {
         HighQuality = "high_quality",
         History = "history",
         HistoryToggleOff = "history_toggle_off",
+        Home = "home",
         HorizontalDistribute = "horizontal_distribute",
         HorizontalRule = "horizontal_rule",
         HorizontalSplit = "horizontal_split",
@@ -646,6 +649,7 @@ export namespace Icon {
         Videocam = "videocam",
         VideocamOff = "videocam_off",
         VideoFile = "video_file",
+        VideogameAsset = "videogame_asset",
         VideoLabel = "video_label",
         ViewCarousel = "view_carousel",
         ViewColumn = "view_column",
@@ -688,7 +692,8 @@ export namespace Icon {
     export type Props = {
 
         type: Type,
-        className?: string
+        class_name?: string,
+        aria_label?: string
 
     }
 
@@ -716,15 +721,28 @@ export namespace Icon {
 
         }
 
+        generateLabel() {
+
+            const ariaLabel = this.props?.aria_label != undefined
+                ? this.props.aria_label
+                : this.props.type;
+
+            return `${Formatting.String.toTitleCase(ariaLabel)} Icon`;
+
+        }
+
         render(): React.ReactNode {
 
-            const iconClass = this.props.className 
-                ? `${this.props.className} material-icons`
+            const iconClass = this.props.class_name 
+                ? `${this.props.class_name} material-icons`
                 : `material-icons`;
-            
+
             return (
 
-                <i className={ iconClass }>
+                <i 
+                    className={ iconClass }
+                    aria-label={ this.generateLabel() }
+                >
 
                     { this.props.type }
                     

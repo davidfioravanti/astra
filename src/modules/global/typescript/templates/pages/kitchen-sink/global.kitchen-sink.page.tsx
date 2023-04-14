@@ -128,7 +128,7 @@ export namespace KitchenSink {
                         
                         </span>
 
-                        <Icon.Component type={ type } className="kitchen-sink__icon"/>
+                        <Icon.Component type={ type } class_name="kitchen-sink__icon"/>
 
                     </div>
                 );

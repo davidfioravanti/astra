@@ -9,50 +9,46 @@ This document serves as a styleguide to ensure code consistency and readability 
 
 ## SCSS
 
-### Generic Variables
-Variables that exist to be used generically throughout the application are referred to as *Generic Variables*. These variable names follow a specific format:
+### Variables, Mixins, and Functions
 
-```
-MODULE----PROPERTY--MODIFIER
-```
+In order to introduce scope and specificity to SCSS variables/mixins/functions, a [BEM-like](https://getbem.com/) naming convention is used. Each of the four parts of the name is separated by a series dashes or underscores further describing it's intended function.
 
-- The `MODULE` part of the name is the name of the module that the SCSS file is in (unless it belongs to the `global` module, in which case the prefix is ommited).
-- The `PROPERTY` part of the name is the style property that this variable will control.
-- The `MODIFIER` part of the name denotes a variant of the property.
+1. `MODULE`
+    - The module that the SCSS file resides in (e.g. global, common)
+2. `ELEMENT`
+    - The specific element scope that the variable/mixin will target
+3. `PROPERTY`
+    - The specific property that this variable mixin will control.
+4. `MODIFIER`
+    - A variant of the collective module, element and property.
+
+It is important to note that variables/mixins/functions within the `global` module omit the `MODULE` portion of the name. This allows for better
+intellisense as these properties will appear first (alphabetically).
+
+#### Generic Variables
+Variables that exist to be used generically throughout the application are referred to as *Generic Variables*. These variable names follow the `MODULE----PROPERTY--MODIFIER` format:
 
 ```scss
-// ========================================================
-// GENERIC VARIABLES
-// ========================================================
-
+// Global Module:
 $----breakpoint--small: 320px;
 $----color--primary: #ffffff;
 
+// Common Module:
 $common----color--red: #ffffff;
 $common----font-family: Arial;
 ```
 
-### Element Variables
+#### Element Variables
 
-Variables that are scoped to specific page elements or HTML tags are referred to as *Element Variables*. These variable names follow a specific format:
-
-```
-MODULE--ELEMENT__PROPERTY--MODIFIER
-```
-
-- The `MODULE` part of the name is the name of the module that the SCSS file is in (unless it belongs to the `global` module, in which case the module prefix is omitted).
-- The `ELEMENT` part of the name is the name of the element of HTML tag that the variable is scoped to.
-- The `PROPERTY` part of the name is the style property of the element that this variable will control.
-- The `MODIFIER` part of the name denotes a variant of the property based on the element's state.
+Variables that are scoped to specific page elements or HTML tags are referred to as *Element Variables*. These variable names follow the
+`MODULE--ELEMENT__PROPERTY--MODIFIER` format:
 
 ```scss
-// ========================================================
-// ELEMENT VARIABLES 
-// ========================================================
-
+// Global Module:
 $--button-primary__background-color: #ffffff;
 $--button-primary__background-color--active: #ffffff;
 
+// Common Module:
 $common--input__background-color: #ffffff;
 $common--input__background-color--active: #ffffff;
 ```

@@ -122,7 +122,7 @@ export namespace Foldable {
                 return (
 
                     <Icon.Component 
-                        className="foldable-control__icon" 
+                        class_name="foldable-control__icon" 
                         type={iconType}
                     />
 

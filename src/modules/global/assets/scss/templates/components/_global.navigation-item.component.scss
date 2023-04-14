@@ -1,0 +1,28 @@
+.navigation-item {
+    display: flex;
+    text-decoration: none;
+
+    &__icon {
+        font-size: $----font-size--h2;
+        line-height: $----font-size--h2;
+        margin: auto 0;
+    }
+
+    &__label {
+        font-size: $----font-size--root;
+        line-height: $----font-size--h2;
+        margin: auto 0 auto 8px;
+    }
+
+}
+
+.navigation-item:has(.navigation-item__icon)
+.navigation-item {
+    
+    &__label {
+        @include ----breakpoint__medium--below {
+            display: none;
+        }
+    }
+
+}

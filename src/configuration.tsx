@@ -2,6 +2,8 @@
 // * IMPORTS - CONFIGURATON
 // * =========================================================================
 
+import { Icon } from "./modules/global/typescript/global.reducer";
+
 import * as Common from "./modules/common/typescript/common.reducer";
 import * as Global from "./modules/global/typescript/global.reducer";
 
@@ -136,12 +138,14 @@ export namespace Configuraton {
         {
             name: "Home",
             path: settings.in_development ? "/home" : "/",
+            icon: Icon.Types.Home,
             element: <Common.Home.Page />
         },
         {
             name: "Kitchen Sink",
             path: settings.in_development ? "/" : "/kitchen-sink",
             element: <Global.KitchenSink.Page />,
+            icon: Icon.Types.Settings,
             options: {
                 navigation_hidden: false
             }

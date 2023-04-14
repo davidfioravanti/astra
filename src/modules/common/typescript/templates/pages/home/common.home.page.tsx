@@ -3,6 +3,7 @@
 // * =========================================================================
 
 import React from "react";
+
 import { Configuraton } from "../../../../../../configuration";
 import { NavigationList } from "../../../../../global/typescript/global.reducer";
 
@@ -89,6 +90,5 @@ export namespace Home {
         }
 
     }
-
 
 }

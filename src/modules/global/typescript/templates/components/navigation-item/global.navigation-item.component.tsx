@@ -74,8 +74,14 @@ export namespace NavigationItem {
                         this.props.route?.icon
                             ? (
                                 <>
-                                    <Icon.Component className="navigation-item__icon" type={ this.props.route.icon } />
-                                    <span className="navigation-item__label">
+                                    <Icon.Component 
+                                        class_name="navigation-item__icon"
+
+                                        type={ this.props.route.icon } 
+                                    />
+                                    <span 
+                                        className="navigation-item__label"
+                                    >
                                         { this.props.route.name }
                                     </span>
                                 </>
