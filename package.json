@@ -1,6 +1,6 @@
 {
   "name": "astra",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "./index.tsx",
   "repository": "https://github.com/davidfioravanti/astra.git",
   "author": "David Fioravanti <davidafioravanti@gmail.com>",

@@ -5,11 +5,11 @@
 
 ## Introduction
 
-ASTRA (short for "*A Scalable Typescript & React Application*") is a framework/starter used to build React applications in a type-safe, modular and maintainable way. It utilizes a module-centric architecture that separates core functionality from custom application logic.
+Astra (short for "*A Scalable Typescript & React Application*") is a framework/starter used to build React applications in a type-safe, modular and maintainable way. It utilizes a module-centric architecture that separates core functionality from custom application logic.
 
 ## Core Principles
 
-The core principles for developing and working within the ASTRA ecyosystem are simple:
+The core principles for developing and working within the Astra ecyosystem are simple:
 
 - Anything outside of the `modules` directory (`index.tsx`, `configuration.tsx`, etc) exists to "wire-up" the application. This includes all of the configuration, routing, and initialization required in order for the app to run.
 

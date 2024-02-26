@@ -138,6 +138,11 @@ export namespace Formatting {
              * @version 0.1.0
              * */
             Camel = "camel",
+            /**
+             * An enum member that denotes a kebab-cased string.
+             * @version 0.1.0
+             */
+            Kebab = "kebab",
             /** 
              * An enum member that denotes a pascal-cased string. 
              * @version 0.1.0
@@ -148,11 +153,6 @@ export namespace Formatting {
              * @version 0.1.0
              */
             Snake = "snake",
-            /**
-             * An enum member that denotes a kebab-cased string.
-             * @version 0.1.0
-             */
-            Kebab = "kebab",
         }
 
         // * ===========================================================================
@@ -206,49 +206,13 @@ export namespace Formatting {
         export function toKebabCase (str: string) : string {
             // ===========================================================================
             // - Add hypens before uppercase letters to account for camel/pascal case.
-            // - Convert and spaces or underscores to hyphens.
+            // - Convert any spaces or underscores to hyphens.
             // - Convert the resulting string to lower case.
             // ===========================================================================
             return str
                 .replace(/([A-Z]([a-z]))/g, "$1-$2")
                 .replace(/[\s_]+/g, '-')
                 .toLowerCase();
-        }
-
-        /**
-         * @param str - The string that will be converted to title case (e.g. 
-         * This is Title Case).
-         * @param options - An optional parameter containing settings that affect
-         * the formatting of the given string. Allows for exclusions.
-         * @param exclusions - An option parameter that allows you to exclude certain
-         * substrings from title case conversion.
-         * @returns The title case version of the given string.
-         * @version 0.1.0
-         */
-        export function toTitleCase(
-            str: string,
-            exclusions?: Array<string>
-        ){
-            // Convert the string to a character array and iterate over it's characters.
-            const titleCaseArr = [...str].map((substr) => {
-                const normalizedSubstr = substr.toLowerCase();
-                // ===========================================================================
-                //     If the substring is listed in the exclusions array, return the substr
-                // in it's unformatted state.
-                // ===========================================================================
-                if (exclusions != undefined && exclusions.includes(normalizedSubstr)) {
-                    return `${substr.charAt(0).toLowerCase()}${substr.slice(1)}`;
-                }
-                // ===========================================================================
-                //     If the substring is not excluded, capitalize the first letter and
-                // return the formatted substring.
-                // ===========================================================================
-                return `${substr.charAt(0).toUpperCase()}${substr.slice(1)}`;
-            });
-            // ===========================================================================
-            // Return the title case string.
-            // ===========================================================================
-            return titleCaseArr.join(" ");
         }
 
     }

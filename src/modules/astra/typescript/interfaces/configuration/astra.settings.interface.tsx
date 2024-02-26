@@ -3,36 +3,32 @@
 // * ===========================================================================
 
 /**
- *     A type that contains fields used to identify the version of the ASTRA
+ *     A type that contains fields used to identify the version of the Astra
  * framework that is currently installed.
  * @version 0.1.0
  */
-type Version = {
+export type Version = {
     /**
-     * The major version of ASTRA that is currently installed.
+     * The major version of the Astra framework that is currently installed.
      * @version 0.1.0
      */
     major: Readonly<number>,
     /**
-     * The minor version of ASTRA that is currently installed.
+     * The minor version of the Astra framework that is currently installed.
      * @version 0.1.0
      */
     minor: Readonly<number>,
     /**
-     * The patch version of ASTRA that is currently installed.
+     * The patch version of the Astra framework that is currently installed.
      * @version 0.1.0
      */
     patch: Readonly<number>,
     /**
-     * The release version of astra framework currently installed.
+     * The prerelease version of the Astra framework currently installed.
+     * @example `alpha`, `beta.1`, `rc.3`
      * @version 0.1.0
      */
-    release: Readonly<string>,
-    /**
-     *     A short description that depicts the purpose of
-     * the release version (e.g. a new feature set).
-     */
-    designation: Readonly<string>
+    pre_release?: Readonly<string>
 }
 
 // * ===========================================================================
@@ -40,12 +36,12 @@ type Version = {
 // * ===========================================================================
 
 /**
- * A type encapsulating settings specific to the ASTRA framework.
+ * A type encapsulating settings specific to the Astra framework.
  * @version 0.1.0
  */
 export type Settings = {
     /**
-     * The version of ASTRA that is currently installed.
+     * The version of the Astra framework that is currently installed.
      * @version 0.1.0
      */
     version: Readonly<Version>
