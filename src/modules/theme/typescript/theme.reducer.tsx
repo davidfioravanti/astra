@@ -7,7 +7,9 @@
 // * Component Exports - Atoms
 // * ===========================================================================
 
+export { Avatar } from "./components/atoms/theme.avatar.atom";
 export { Badge } from "./components/atoms/theme.badge.atom";
+export { Icon } from "./components/atoms/theme.icon.atom";
 
 // * ===========================================================================
 // * Component Exports - Molecules

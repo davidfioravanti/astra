@@ -25,9 +25,9 @@ export namespace Badge {
      * @version 0.1.0
      */
     export enum Variant {
-        Empty = "badge--empty",
-        Icon = "badge--icon",
-        Number = "badge--number",
+        Empty = "badge--empty-variant",
+        Icon = "badge--icon-variant",
+        Number = "badge--number-variant",
     }
 
     // * ===========================================================================
@@ -56,6 +56,12 @@ export namespace Badge {
              * @version 0.1.0
              */
             options?: {
+                /**
+                 *     An optional setting that will automatically add `margin-right` to the
+                 * Badge component's parent element, creating adequate space for the badge.
+                 * @version 0.1.0
+                 */
+                enable_auto_adjust_margin_right?: boolean,
                 /**
                  *     An optional setting that will hide the badge value if it is zero.
                  * Instead of displaying a number, the badge will appear as an empty bubble.
@@ -90,7 +96,7 @@ export namespace Badge {
     }
 
     // * ===========================================================================
-    // * Badge Atom Component
+    // * Badge Component
     // * ===========================================================================
     
     /**
@@ -103,11 +109,10 @@ export namespace Badge {
      * @version 0.1.0
      */
     export const Atom : FunctionComponent<Properties> = ({ props, ...rest }) : JSX.Element => {
-
         // ===========================================================================
         // Create a ref for the Badge component element.
         // ===========================================================================
-        const badgeRef = useRef<HTMLDivElement>(null);
+        const badgeRef = useRef<HTMLSpanElement>(null);
         /**
          *     A method for generating a concatenated string of class names that will appear
          * on the Badge component element.
@@ -148,16 +153,9 @@ export namespace Badge {
                     return;
                 }
                 if (typeof props.content === "number") {
-                    // ===========================================================================
-                    // If hiding zero values is enabled and the value is zero, return nothing.
-                    // ===========================================================================
                     if (props.content <= 0 && props.options?.enable_hide_zero_value === true) {
                         return;
                     }
-                    // ===========================================================================
-                    //     If a maximum value is provided, clamp the value to the maximum. If the
-                    // maximum plus option is enabled, append a plus symbol to the result.
-                    // ===========================================================================
                     if (props.options?.maximum_value != undefined) {
                         if (props.content > props.options.maximum_value) {
                             return (
@@ -173,23 +171,24 @@ export namespace Badge {
                     }
                 }
             } else {
-                // ===========================================================================
-                // Return nothing, displaying no badge content.
-                // ===========================================================================
                 return;
             }
         };
         // ===========================================================================
         //     Using an effect hook, programmatically set the Badge component's parent
-        // element to "position: relative" by giving it the "badge-container" class.
+        // element to "position: relative" by giving it the "badge-container" class if
+        // it does not already have it.
         // ===========================================================================
         useEffect(() => {
             const badgeElement = badgeRef.current;
             if (badgeElement) {
                 const parentElement = badgeElement.parentElement;
-                badgeElement.parentElement?.classList.add("badge-container");
-                if (props?.variant != Variant.Empty) {
-                    badgeElement.style.left = `${parentElement!.offsetWidth - 12}px`
+                if (!badgeElement.parentElement?.classList.contains("badge-container")) {
+                    badgeElement.parentElement?.classList.add("badge-container");
+                }
+                badgeElement.style.left = `${parentElement!.offsetWidth - 16}px`;
+                if (props?.options?.enable_auto_adjust_margin_right) {
+                    parentElement!.style.marginRight = `${badgeElement!.offsetWidth}px`;
                 }
             }
         }, []);
@@ -205,7 +204,6 @@ export namespace Badge {
                 { generateBadgeContent() }
             </span>
         );
-        
     }
 
 }

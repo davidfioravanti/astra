@@ -8,7 +8,9 @@ import { FunctionComponent, useState } from "react";
 // * TypeScript & Asset Imports
 // * ===========================================================================
 
+import { Avatar } from "../atoms/theme.avatar.atom";
 import { Badge } from "../atoms/theme.badge.atom";
+import { Icon } from "../atoms/theme.icon.atom";
 
 // * ===========================================================================
 // * Kitchen Sink Namespace
@@ -35,18 +37,60 @@ export namespace KitchenSink {
             <article
                 className="page page--kitchen-sink"
             >
-                <span>
-                    <Badge.Atom 
-                        props={{
-                            content: 1000,
+                <div>
+                    <Avatar.Atom 
+                        props={{ 
+                            image_src: "https://mui.com/static/images/avatar/2.jpg", 
+                            user_name: ["foo", "bar"],
                             options: {
-                                maximum_value: 100,
-                                enable_maximum_value_plus: true
+                                size: Avatar.Size.Medium
                             },
-                            variant: Badge.Variant.Number
+                            variant: Avatar.Variant.Image
                         }}
                     />
-                </span>
+                </div>
+                <div
+                    style={{
+                        display: "flex",
+                        columnGap: "16px"
+                    }}
+                >
+                    <button>
+                        <Icon.Atom props={{ type: Icon.Type.CircleNotifications }}>                    
+                            <Badge.Atom
+                                props={{
+                                    variant: Badge.Variant.Empty
+                                }}
+                            />
+                        </Icon.Atom>
+                    </button>
+                    <button>
+                        <Icon.Atom props={{ type: Icon.Type.CreditCard }}>                    
+                            <Badge.Atom
+                                props={{
+                                    variant: Badge.Variant.Empty
+                                }}
+                            />
+                        </Icon.Atom>
+                    </button>
+                    <button>
+                        <Icon.Atom props={{ type: Icon.Type.AccountBox }}>                    
+                            <Badge.Atom
+                                props={{
+                                    content: 100,
+                                    options: {
+                                        enable_auto_adjust_margin_right: false,
+                                        enable_hide_zero_value: true,
+                                        enable_maximum_value_plus: true,
+                                        maximum_value: 1000,
+                                    },
+                                    variant: Badge.Variant.Empty
+                                }}
+                            />
+                        </Icon.Atom>
+
+                    </button>
+                </div>
             </article>
         )
     }

@@ -11,6 +11,12 @@ export { Routing } from "./interfaces/configuration/astra.routing.interface";
 export { Settings } from "./interfaces/configuration/astra.settings.interface";
 
 // * ===========================================================================
+// * Integration Exports
+// * ===========================================================================
+
+export { GoogleFonts } from "./interfaces/integrations/astra.google-fonts.interface";
+
+// * ===========================================================================
 // * Utiltiy Exports
 // * ===========================================================================
 
