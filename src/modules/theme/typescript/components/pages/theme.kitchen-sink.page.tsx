@@ -11,6 +11,7 @@ import { FunctionComponent, useState } from "react";
 import { Avatar } from "../atoms/theme.avatar.atom";
 import { Badge } from "../atoms/theme.badge.atom";
 import { Icon } from "../atoms/theme.icon.atom";
+import { Random } from "../../../../astra/typescript/astra.reducer";
 
 // * ===========================================================================
 // * Kitchen Sink Namespace
@@ -33,21 +34,32 @@ export namespace KitchenSink {
     // * ===========================================================================
 
     export const Page : FunctionComponent<Properties> = ({ props, ...rest} : Properties) : JSX.Element  => {
+
         return (
             <article
                 className="page page--kitchen-sink"
             >
-                <div>
-                    <Avatar.Atom 
-                        props={{ 
-                            image_src: "https://mui.com/static/images/avatar/2.jpg", 
-                            user_name: ["foo", "bar"],
-                            options: {
-                                size: Avatar.Size.Medium
-                            },
-                            variant: Avatar.Variant.Image
-                        }}
-                    />
+                <div
+                    style={{
+                        columnGap: 10,
+                        display: "flex",
+                        flexWrap: "wrap"
+                    }}
+                >
+                    {
+                        [...Array(10).keys()].map((item, index) => 
+                            <Avatar.Atom
+                                key={ index } 
+                                props={{
+                                    image_alt: `${Random.letter().toUpperCase()}${Random.letter().toUpperCase()}'s Avatar Image`,
+                                    image_src: `https://i.pravatar.cc/100?u=${Random.integer(0, 100)}`, 
+                                    letters: `${Random.letter()}${Random.letter()}`,
+                                    size: Avatar.Size.Medium,
+                                    variant: Avatar.Variant.Image,
+                                }}
+                            />
+                        )
+                    }
                 </div>
                 <div
                     style={{
@@ -59,7 +71,11 @@ export namespace KitchenSink {
                         <Icon.Atom props={{ type: Icon.Type.CircleNotifications }}>                    
                             <Badge.Atom
                                 props={{
-                                    variant: Badge.Variant.Empty
+                                    content: 20,
+                                    options: {
+                                        maximum_value: 10,
+                                    },
+                                    variant: Badge.Variant.Number
                                 }}
                             />
                         </Icon.Atom>

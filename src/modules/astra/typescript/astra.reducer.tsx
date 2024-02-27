@@ -20,3 +20,4 @@ export { GoogleFonts } from "./interfaces/integrations/astra.google-fonts.interf
 // * Utiltiy Exports
 // * ===========================================================================
 
+export { Random } from "./interfaces/utilities/astra.random.interface";

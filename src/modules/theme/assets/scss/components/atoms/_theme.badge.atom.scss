@@ -1,5 +1,13 @@
+// * ===========================================================================
+// * Badge Component Variables
+// * ===========================================================================
+
 $theme--badge__background-color: red;
 $theme--badge__color: white;
+
+// * ===========================================================================
+// * Badge Component Elements
+// * ===========================================================================
 
 .badge {
     background-color: $theme--badge__background-color;
@@ -21,24 +29,28 @@ $theme--badge__color: white;
     width: auto;
     transform: matrix(1, 0, 0, 1, 10, 0);
     transform-origin: 10px 0px;
-    
-    &--empty-variant {
-        border-radius: 50%;
-        height: 10px;
-        padding: 5px;
-        right: 0;
-        top: 0;
-        transform: matrix(1, 0, 0, 1, 10, -10);
-        transform-origin: 10px 0px;
-        width: 10px;
-    }
-
-    &:hover {
-        border: 1px solid $theme--badge__background-color;
-        transition: border .25s ease-in-out;
-    }
 }
 
 .badge-container:has(.badge) {
     position: relative;
+}
+
+.badge--empty-variant {
+    border-radius: 50%;
+    height: 10px;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    transform: matrix(1, 0, 0, 1, 10, -10);
+    transform-origin: 10px 0px;
+    width: 10px;
+}
+
+// * ===========================================================================
+// * Badge Component States
+// * ===========================================================================
+
+.badge:hover {
+    border: 1px solid $theme--badge__background-color;
+    transition: border .25s ease-in-out;
 }

@@ -1,77 +1,196 @@
+// * ===========================================================================
+// * Avatar Component Variables
+// * ===========================================================================
+
+$theme--avatar__font-size--small: 24px;
+$theme--avatar__font-size--medium: 32px;
+$theme--avatar__font-size--large: 32px;
 $theme--avatar__size--small: 48px;
 $theme--avatar__size--medium: 64px;
 $theme--avatar__size--large: 80px;
 
+// * ===========================================================================
+// * Avatar Component Elements
+// * ===========================================================================
+
 .avatar {
     position: relative;
-}
-
-.avatar--small {
-    max-width: $theme--avatar__size--small;
-
-    .avatar__image {
-        max-width: $theme--avatar__size--small;
-    }
-
-    .avatar__username {
-        font-size: 24px;
-    }
-}
-
-.avatar--medium {
-    max-width: $theme--avatar__size--medium;
-
-    .avatar__image {
-        max-width: $theme--avatar__size--medium;
-    }
-
-    .avatar__username {
-        font-size: 32px;
-    }
-}
-
-.avatar--large {
-    max-width: $theme--avatar__size--large;
-
-    .avatar__image {
-        max-width: $theme--avatar__size--large;
-    }
-
-    .avatar__username {
-        font-size: 32px;
-    }
-}
-
-.avatar--image-variant:hover {
-
-    .avatar__image {
-        filter: contrast(0.25);
-        box-shadow: 0px 0px 3px black;
-        border: 1px solid black;
-    }
-
-    .avatar__username {
-        opacity: 1;
-        transition: opacity 0.25s ease-in-out;
-    }   
 }
 
 .avatar__image {
     border: 1px solid transparent;
     border-radius: 50%;
     box-shadow: 0px 0px 3px transparent;
-    transition: box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out, filter 0.25s ease-in-out;
+    transition: 
+        box-shadow 0.25s ease-in-out, 
+        border-color 0.25s ease-in-out, 
+        filter 0.25s ease-in-out;
 }
 
-.avatar__username {
+.avatar__letters {
+    color: white;
+    font-family: $----font-family--primary;
+    font-weight: normal;
+    left: 50%;
     opacity: 0;
+    pointer-events: none;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-weight: normal;
-    font-family: $----font-family--secondary;
     user-select: none;
-    pointer-events: none;
+    z-index: 2;
+}
+
+.avatar--image-variant {
+    &::after {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition:opacity .25s ease-in-out;
+        z-index: 1;
+    }
+}
+
+// * ===========================================================================
+// * Avatar Component Sizes
+// * ===========================================================================
+
+.avatar--small {
+    max-width: $theme--avatar__size--small;
+    max-height: $theme--avatar__size--small;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar--small
+.avatar__image {
+    max-width: $theme--avatar__size--small;
+    max-height: $theme--avatar__size--small;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar--small.avatar--image-variant {
+    &::after {
+        width: $theme--avatar__size--small;
+        height: $theme--avatar__size--small;
+    }
+}
+
+.avatar--small
+.avatar__letters {
+    font-size: $theme--avatar__font-size--small;
+}
+
+.avatar--medium {
+    max-width: $theme--avatar__size--medium;
+    max-height: $theme--avatar__size--medium;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar--medium
+.avatar__image {
+    max-width: $theme--avatar__size--medium;
+    max-height: $theme--avatar__size--medium;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar--medium.avatar--image-variant {
+    &::after {
+        width: $theme--avatar__size--medium;
+        height: $theme--avatar__size--medium;
+    }
+}
+
+.avatar--medium
+.avatar__letters {
+    font-size: $theme--avatar__font-size--medium;
+}
+
+.avatar--large {
+    max-width: $theme--avatar__size--large;
+}
+
+.avatar--large
+.avatar__image {
+    max-width: $theme--avatar__size--large;
+}
+
+.avatar--large
+.avatar__letters {
+    font-size: $theme--avatar__font-size--large;
+}
+
+// * ===========================================================================
+// * Avatar Component States
+// * ===========================================================================
+
+@mixin theme--avatar-image-hover {
+    box-shadow: 0px 0px 3px black;
+    border: 1px solid black;
+}
+
+.avatar--image-variant.avatar--letter-reveal:hover
+.avatar__image,
+.avater--image-variant.avatar--letter-reveal.focused
+.avatar__image {
+    @include theme--avatar-image-hover;
+}
+
+.avatar--image-variant.avatar--letter-reveal:hover
+.avatar__image,
+.avatar--image-variant.avatar--letter-reveal.focused
+.avatar__image {
+    box-shadow: 0px 0px 3px black;  
+    border: 1px solid black;
+}
+
+.avatar--image-variant.avatar--letter-reveal:hover
+.avatar__letters,
+.avatar--image-variant.avatar--letter-reveal.focused
+.avatar__letters {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.avatar--image-variant.avatar--letter-reveal:hover,
+.avatar--image-variant.avatar--letter-reveal.focused {
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background-color: rgba(0, 0, 0, 0.349);
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.avatar--small.avatar--image-variant.avatar--letter-reveal:hover {
+    &::after {
+        width: $theme--avatar__size--small;
+        height: $theme--avatar__size--small;
+    }
+}
+
+.avatar--medium.avatar--image-variant.avatar--letter-reveal:hover {
+    &::after {
+        width: $theme--avatar__size--medium;
+        height: $theme--avatar__size--medium;
+    }
+}
+
+:root {
+    --theme--avatar__size--small: #{$theme--avatar__size--small};
+    --theme--avatar__size--medium: #{$theme--avatar__size--medium};
+    --theme--avatar__size--large: #{$theme--avatar__size--large};
 }

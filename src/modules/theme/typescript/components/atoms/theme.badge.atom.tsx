@@ -2,7 +2,7 @@
 // * Package Dependency Imports
 // * ===========================================================================
 
-import { FunctionComponent, useEffect, useRef } from "react";
+import { FunctionComponent, useEffect, useRef, useLayoutEffect } from "react";
 
 // * ===========================================================================
 // * Badge Namespace
@@ -69,9 +69,11 @@ export namespace Badge {
                  */
                 enable_hide_zero_value?: boolean,
                 /**
-                 *     An optional setting that, if enabled, will append a plus symbol after
+                 *     An optional setting (enabled by default) that will append a plus symbol after
                  * the maximum value if the badge value exceeds it. This setting will only 
-                 * take effect if the `maximum_value` setting is used.
+                 * take effect if the conditions are true:
+                 * - A value for the `maximum_value` setting is provided.
+                 * - `enable_maximum_value_plus != false`.
                  * @version 0.1.0
                  */
                 enable_maximum_value_plus?: boolean,
@@ -159,7 +161,7 @@ export namespace Badge {
                     if (props.options?.maximum_value != undefined) {
                         if (props.content > props.options.maximum_value) {
                             return (
-                                props.options.enable_maximum_value_plus === true
+                                props.options.enable_maximum_value_plus != false
                                     ? `${props.options.maximum_value}+`
                                     : props.options.maximum_value 
                             );
@@ -186,7 +188,7 @@ export namespace Badge {
                 if (!badgeElement.parentElement?.classList.contains("badge-container")) {
                     badgeElement.parentElement?.classList.add("badge-container");
                 }
-                badgeElement.style.left = `${parentElement!.offsetWidth - 16}px`;
+                // badgeElement.style.left = `${parentElement!.offsetWidth - 16}px`;
                 if (props?.options?.enable_auto_adjust_margin_right) {
                     parentElement!.style.marginRight = `${badgeElement!.offsetWidth}px`;
                 }

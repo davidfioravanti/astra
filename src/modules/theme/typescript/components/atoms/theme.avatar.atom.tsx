@@ -17,7 +17,7 @@ export namespace Avatar {
     export enum Variant {
         Icon = "avatar--icon-variant",
         Image = "avatar--image-variant",
-        Letter = "avatar--letter-variant",
+        Letters = "avatar--letters-variant",
     }
 
     export enum Size {
@@ -37,12 +37,20 @@ export namespace Avatar {
          * @version 0.1.0
          */
         props: {
+            image_alt?: string,
             image_src?: string,
-            user_name: string | [string, string],
+            letters: string,
             options?: {
-                size?: Avatar.Size
-            }
-            variant: Avatar.Variant
+                /**
+                 *      An optional setting that will reveal the username "letters"
+                 * over the Avatar component image when hovered. **Requires the image
+                 * variant**.
+                 * @version 0.1.0
+                */
+               enable_reveal_letters_on_hover?: boolean,
+            },
+            size?: Avatar.Size,
+            variant: Avatar.Variant,
         }
     }
 
@@ -51,6 +59,7 @@ export namespace Avatar {
     // * ===========================================================================
 
     export const Atom : FunctionComponent<Properties> = ({ props, ...rest}) : JSX.Element => {
+        const avatarRef = useRef<HTMLElement>(null);
         /**
          *     A method for generating a concatenated string of class names that will appear
          * on the Avatar component element.
@@ -59,38 +68,73 @@ export namespace Avatar {
          */
         const generateClassName = () => {
             let classArray = [];
-            const size = props.options?.size != undefined ? props.options.size : Size.Small;
+            const size = props.size != undefined ? props.size : Size.Small;
             rest?.className === undefined
                 ? classArray.push(`avatar ${props.variant} ${size}`)
                 : classArray.push(`avatar ${props.variant} ${size} ${rest.className}`);
+            if (props.variant === Avatar.Variant.Image && props.options?.enable_reveal_letters_on_hover != false) {
+                classArray.push(" avatar--letter-reveal");
+            }
             return classArray.join("");
         }
-        const generateUsername = () => {
-            if (Array.isArray(props.user_name)) {
-                const firstInitial = props.user_name[0].split("")[0].toUpperCase();
-                const lastInitial = props.user_name[1].split("")[0].toUpperCase();
-                return `${firstInitial}${lastInitial}`;
+        const generateLetters = () => {
+            return props.letters.slice(0, 2).toUpperCase();
+        }
+        const generateIntrinsicImageSize = () => {
+            // ! ==============================================================
+            // !     NOTE: Replace computed variable lookup with CSS API that 
+            // ! the archived version of Astra used.
+            // ! ==============================================================
+            const root = getComputedStyle(document.documentElement);
+            const variables = {
+                small: root.getPropertyValue("--theme--avatar__size--small"),
+                medium: root.getPropertyValue("--theme--avatar__size--medium"),
+                large: root.getPropertyValue("--theme--avatar__size--large")
+            };
+            switch (props.size) {
+                case Avatar.Size.Small :
+                    return variables.small
+                case Avatar.Size.Medium :
+                    return variables.medium
+                case Avatar.Size.Large :
+                    return variables.large
+                default :
+                    return variables.small;
             }
         }
-        const generateFigcaption = () => {
-            return (
-                <figcaption className="avatar__username">
-                    { generateUsername() }
-                </figcaption>
-            )
-        }
+        const handleAvatarFocus = () => {
+            const avatarElement = avatarRef.current;
+            if (avatarElement) {
+                avatarElement.classList.add("focused");
+            }
+        };
+        const handleAvatarBlur = () => {
+            const avatarElement = avatarRef.current;
+            if (avatarElement) {
+                avatarElement.classList.remove('focused');
+            }
+        };
         // ===========================================================================
         // Render the Icon component.
         // ===========================================================================
         return (
             <figure
+                ref={ avatarRef }
+                onFocus={ () => handleAvatarFocus() }
+                onBlur={ () => handleAvatarBlur() }
+                tabIndex={ 0 }
                 className={ generateClassName() }
             >
                 <img
+                    alt={ props.image_alt != undefined ? props.image_alt : `${props.letters.toUpperCase()}'s Avatar Image`}
                     className="avatar__image"
                     src={ props.image_src }
+                    width={ generateIntrinsicImageSize() }
+                    height={ generateIntrinsicImageSize() }
                 />
-                { generateFigcaption() }
+                <figcaption className="avatar__letters">
+                    { generateLetters() }
+                </figcaption>
             </figure>
         );
     }
