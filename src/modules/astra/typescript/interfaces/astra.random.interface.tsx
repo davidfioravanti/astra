@@ -5,13 +5,6 @@ import { Tokens } from "./astra.tokens.interface";
  * @version 0.1.0
  */
 export namespace Random {
-    
-    /**
-     *     A variable containing an array of all 26 lowercase letters of the English 
-     * alphabet. Used for random string generation.
-     * @version 0.1.0
-     */
-    const _lettersArray : Array<Tokens.Letter> = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     /**
      *     A function that returns a random RGB color string (CSS format), where 
@@ -49,7 +42,7 @@ export namespace Random {
      * @version 0.1.0
      */
     export const letter = () : Tokens.Letter => {
-        return _lettersArray[Math.floor(Math.random() * 25)];
+        return Tokens.letters[Math.floor(Math.random() * 25)];
     }
 
     /**
