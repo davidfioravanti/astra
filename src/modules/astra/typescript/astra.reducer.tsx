@@ -4,20 +4,13 @@
 // ===========================================================================
 
 // * ===========================================================================
-// * Configuration Exports
+// * Interface Exports
 // * ===========================================================================
 
-export { Routing } from "./interfaces/configuration/astra.routing.interface";
-export { Settings } from "./interfaces/configuration/astra.settings.interface";
-
-// * ===========================================================================
-// * Integration Exports
-// * ===========================================================================
-
-export { GoogleFonts } from "./interfaces/integrations/astra.google-fonts.interface";
-
-// * ===========================================================================
-// * Utiltiy Exports
-// * ===========================================================================
-
-export { Random } from "./interfaces/utilities/astra.random.interface";
+export { Formatting } from "./interfaces/astra.formatting.interface";
+export { Mathematics } from "./interfaces/astra.mathematics.interface";
+export { Random } from "./interfaces/astra.random.interface";
+export { Routing } from "./interfaces/astra.routing.interface";
+export { Settings } from "./interfaces/astra.settings.interface";
+export { Tokens } from "./interfaces/astra.tokens.interface";
+export { Utilities } from "./interfaces/astra.utilities.interface";

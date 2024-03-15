@@ -1,2 +1,135 @@
+// * ===========================================================================
+// * Theme Variables - Defaults - Borders
+// * ===========================================================================
+
+$----border-radius: 4px;
+$----border-style: solid;
+$----border-width: 1px;
+
+// * ===========================================================================
+// * Theme Variables - Defaults - Breakpoints
+// * ===========================================================================
+
+$----breakpoint--large: 1024px;
+$----breakpoint--medium: 640px;
+$----breakpoint--small: 320px;
+$----breakpoint--x-large: 1200px;
+$----breakpoint--xx-large: 1440px;
+
+// * ===========================================================================
+// * Theme Variables - Defaults - Colors
+// * ===========================================================================
+
+$----color--black: #282828;
+$----color--blue: #4f8fba;
+$----color--gray: #444444;
+$----color--green: #75a743;
+$----color--orange: #da863e;
+$----color--pink: #c65197;
+$----color--purple: #7a367b;
+$----color--red: #a53030;
+$----color--white: #ffffff;
+$----color--yellow: #e8c170;
+
+// * ===========================================================================
+// * Theme Variables - Defaults - Font Families
+// * ===========================================================================
+
 $----font-family--primary: "Roboto Slab";
 $----font-family--secondary: "Roboto Mono";
+
+// * ===========================================================================
+// * Theme Variables - Defaults - Font Sizes
+// * ===========================================================================
+
+$----font-size--base: 1rem;
+$----font-size--h1: 2.5rem;
+$----font-size--h2: 2rem;
+$----font-size--h3: 1.75rem;
+$----font-size--h4: 1.5rem;
+$----font-size--h5: 1.25rem;
+$----font-size--h6: 1rem;
+
+// * ===========================================================================
+// * Theme Variables - Defaults - Font Weights
+// * ===========================================================================
+
+$----font-weight--bold: 700;
+$----font-weight--extra-bold: 800;
+$----font-weight--extra-light: 200;
+$----font-weight--heavy: 900;
+$----font-weight--light: 300;
+$----font-weight--medium: 500;
+$----font-weight--normal: 400;
+$----font-weight--semi-bold: 600;
+$----font-weight--thin: 100;
+
+:root {
+
+    // * ===========================================================================
+    // * Root Variables - Defaults - Borders
+    // * ===========================================================================
+
+    ------border-radius: #{$----border-radius};
+    ------border-style: #{$----border-style};
+    ------border-width: #{$----border-width};
+
+    // * ===========================================================================
+    // * Root Variables - Defaults - Breakpoints
+    // * ===========================================================================
+
+    ------breakpoint--large: #{$----breakpoint--large};
+    ------breakpoint--medium: #{$----breakpoint--medium};
+    ------breakpoint--small: #{$----breakpoint--small};
+    ------breakpoint--x-large: #{$----breakpoint--x-large};
+    ------breakpoint--xx-large: #{$----breakpoint--xx-large};
+
+    // * ===========================================================================
+    // * Root Variables - Defaults - Colors
+    // * ===========================================================================
+
+    ------color--black: #{$----color--black};
+    ------color--blue: #{$----color--blue};
+    ------color--gray: #{$----color--gray};
+    ------color--green: #{$----color--green};
+    ------color--orange: #{$----color--orange};
+    ------color--pink: #{$----color--pink};
+    ------color--purple: #{$----color--purple};
+    ------color--red: #{$----color--red};
+    ------color--white: #{$----color--white};
+    ------color--yellow: #{$----color--yellow};
+
+    // * ===========================================================================
+    // * Root Variables - Defaults - Font Families
+    // * ===========================================================================
+
+    ------font-family--primary: #{$----font-family--primary};
+    ------font-family--secondary: #{$----font-family--secondary};
+
+    // * ===========================================================================
+    // * Root Variables - Defaults - Font Sizes
+    // * ===========================================================================
+
+    ------font-size--base: #{$----font-size--base};
+    ------font-size--h1: #{$----font-size--h1};
+    ------font-size--h2: #{$----font-size--h2};
+    ------font-size--h3: #{$----font-size--h3};
+    ------font-size--h4: #{$----font-size--h4};
+    ------font-size--h5: #{$----font-size--h5};
+    ------font-size--h6: #{$----font-size--h6};
+
+    // * ===========================================================================
+    // * Root Variables - Defaults - Font Weights
+    // * ===========================================================================
+
+    ------font-weight--bold: #{$----font-weight--bold};
+    ------font-weight--extra-bold: #{$----font-weight--extra-bold};
+    ------font-weight--extra-light: #{$----font-weight--extra-light};
+    ------font-weight--heavy: #{$----font-weight--heavy};
+    ------font-weight--light: #{$----font-weight--light};
+    ------font-weight--medium: #{$----font-weight--medium};
+    ------font-weight--normal: #{$----font-weight--normal};
+    ------font-weight--semi-bold: #{$----font-weight--semi-bold};
+    ------font-weight--thin: #{$----font-weight--thin};
+
+}

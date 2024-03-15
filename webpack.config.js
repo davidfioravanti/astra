@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -15,6 +16,19 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserWebpackPlugin({
+                terserOptions: {
+                    format: {
+                        comments: false
+                    },
+                },
+                extractComments: false,
+            }),
+        ],
     },
     devtool: "source-map",
     module: {

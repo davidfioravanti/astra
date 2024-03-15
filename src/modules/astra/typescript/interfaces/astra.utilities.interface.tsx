@@ -6,8 +6,8 @@
  * A namespace containing utlity types used throughout the Astra framework.
  * @version 0.1.0
  */
-export namespace Types {
-
+export namespace Utilities {
+    
     /**
      * A utility type that dynamically makes all properties of a given type required.
      * @param T - The given type whose properties will be required.
